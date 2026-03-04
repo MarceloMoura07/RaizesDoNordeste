@@ -7,6 +7,7 @@ from sqlalchemy import func
 from app.domain.product import Product
 from app.domain.pedido import Pedido
 from app.domain.pedido_item import PedidoItem
+from app.domain.pedido import STATUS_PEDIDO
 
 def register_routes(app):
 
@@ -45,23 +46,31 @@ def register_routes(app):
         nome = data.get("nome")
         email = data.get("email")
         password = data.get("password")
+        role = data.get("role", "CLIENTE")  # 🔹 novo campo opcional
 
         if not nome or not email or not password:
             return {"erro": "Dados incompletos"}, 400
+
+        # 🔹 Evita criar usuário duplicado
+        if User.query.filter_by(email=email).first():
+            return {"erro": "E-mail já cadastrado"}, 409
 
         hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
 
         new_user = User(
             nome=nome,
             email=email,
-            senha=hashed_password
+            senha=hashed_password,
+            role=role
         )
 
         db.session.add(new_user)
         db.session.commit()
 
-        return {"message": "Usuário criado com sucesso"}, 201
-
+        return {
+            "message": "Usuário criado com sucesso",
+            "role": new_user.role
+        }, 201
 
 
     @app.route('/login', methods=['POST'])
@@ -178,7 +187,7 @@ def register_routes(app):
         if not unidade_id or not canal or not itens:
             return {"erro": "Dados incompletos"}, 400
 
-        user_id = get_jwt_identity()
+        user_id = int(get_jwt_identity())
 
         novo_pedido = Pedido(
             user_id=user_id,
@@ -187,43 +196,102 @@ def register_routes(app):
         )
 
         db.session.add(novo_pedido)
-        db.session.commit()
+        db.session.flush()  # garante que já temos o ID sem precisar commit
+
+        total = 0
 
         for item in itens:
+
             produto = Product.query.get(item["produto_id"])
 
             if not produto:
                 return {"erro": "Produto não encontrado"}, 404
 
+            quantidade = item.get("quantidade")
+
+            if not quantidade or quantidade <= 0:
+                return {"erro": "Quantidade inválida"}, 400
+
+            preco_unitario = produto.preco
+
             pedido_item = PedidoItem(
                 pedido_id=novo_pedido.id,
                 produto_id=produto.id,
-                quantidade=item["quantidade"]
+                quantidade=quantidade,
+                preco_unitario=preco_unitario
             )
 
             db.session.add(pedido_item)
 
+            total += quantidade * preco_unitario
+
+        novo_pedido.valor_total = total
+
         db.session.commit()
 
-        return {"message": "Pedido criado com sucesso"}, 201
+        return {
+            "message": "Pedido criado com sucesso",
+            "pedido_id": novo_pedido.id,
+            "valor_total": novo_pedido.valor_total
+        }, 201
 
-    @app.route('/meus-pedidos', methods=['GET'])
+    @app.route('/pedidos', methods=['GET'])
     @jwt_required()
-    def listar_meus_pedidos():
+    def listar_pedidos():
 
-        user_id = get_jwt_identity()
+        canal = request.args.get("canalPedido")
 
-        pedidos = Pedido.query.filter_by(user_id=user_id).all()
+        query = Pedido.query
+
+        if canal:
+            query = query.filter_by(canal=canal)
+
+        pedidos = query.all()
 
         resultado = []
 
         for pedido in pedidos:
             resultado.append({
                 "id": pedido.id,
-                "unidade_id": pedido.unidade_id,
                 "canal": pedido.canal,
-                "status": pedido.status,
-                "data_criacao": pedido.data_criacao
+                "status": pedido.status
             })
 
         return resultado, 200
+
+    @app.route('/pedido/<int:pedido_id>/status', methods=['PUT'])
+    @jwt_required()
+    def atualizar_status(pedido_id):
+
+        data = request.get_json()
+        novo_status = data.get("status")
+
+        if not novo_status:
+            return {"erro": "Status não informado"}, 400
+
+        if novo_status not in STATUS_PEDIDO:
+            return {"erro": "Status inválido"}, 400
+
+        pedido = Pedido.query.get(pedido_id)
+
+        if not pedido:
+            return {"erro": "Pedido não encontrado"}, 404
+
+        pedido.status = novo_status
+        db.session.commit()
+
+        return {"message": "Status atualizado com sucesso"}, 200
+
+    @app.route('/pedido/<int:pedido_id>/cancelar', methods=['PUT'])
+    @jwt_required()
+    def cancelar_pedido(pedido_id):
+
+        pedido = Pedido.query.get(pedido_id)
+
+        if not pedido:
+            return {"erro": "Pedido não encontrado"}, 404
+
+        pedido.status = "cancelado"
+        db.session.commit()
+
+        return {"message": "Pedido cancelado com sucesso"}, 200

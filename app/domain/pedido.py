@@ -1,6 +1,14 @@
 from app.infrastructure.database import db
 from datetime import datetime
 
+STATUS_PEDIDO = [
+        "pendente",
+        "cozinha",
+        "pronto",
+        "entregue",
+        "cancelado"
+    ]
+
 class Pedido(db.Model):
     __tablename__ = "pedidos"
 
@@ -11,5 +19,18 @@ class Pedido(db.Model):
 
     canal = db.Column(db.String(50), nullable=False)
 
-    data_criacao = db.Column(db.DateTime, default=datetime.utcnow)
     status = db.Column(db.String(50), default="pendente")
+
+    valor_total = db.Column(db.Float, default=0.0)
+
+    data_criacao = db.Column(db.DateTime, default=datetime.utcnow)
+
+    itens = db.relationship("PedidoItem", backref="pedido", lazy=True)
+
+def calcular_total(self):
+    total = 0
+
+    for item in self.itens:
+        total += item.quantidade * item.preco_unitario
+
+    self.valor_total = total
