@@ -3,6 +3,8 @@ from flask_jwt_extended import JWTManager
 from app.infrastructure.database import db
 from app.api.routes import register_routes
 from app.domain.user import bcrypt
+from app.domain.pedido import Pedido
+from app.domain.pedido_item import PedidoItem
 
 def create_app():
     app = Flask(__name__)
@@ -13,6 +15,9 @@ def create_app():
     bcrypt.init_app(app)
     jwt = JWTManager(app)
     register_routes(app)
+
+    with app.app_context():
+        db.create_all()
 
     return app
 
