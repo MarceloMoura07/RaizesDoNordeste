@@ -10,3 +10,5 @@ class Product(db.Model):
     unidade_id = db.Column(db.Integer, db.ForeignKey("unidades.id"), nullable=False)
 
     unidade = db.relationship("Unidade", backref="produtos")
+
+    estoque = db.Column(db.Integer, default=0)

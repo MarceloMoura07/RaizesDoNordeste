@@ -8,6 +8,8 @@ from app.domain.product import Product
 from app.domain.pedido import Pedido
 from app.domain.pedido_item import PedidoItem
 from app.domain.pedido import STATUS_PEDIDO
+from app.domain.product import Product
+
 
 def register_routes(app):
 
@@ -212,6 +214,9 @@ def register_routes(app):
             if not quantidade or quantidade <= 0:
                 return {"erro": "Quantidade inválida"}, 400
 
+            if produto.estoque < quantidade:
+                return {"erro": "Estoque insuficiente"}, 409
+
             preco_unitario = produto.preco
 
             pedido_item = PedidoItem(
@@ -222,6 +227,8 @@ def register_routes(app):
             )
 
             db.session.add(pedido_item)
+
+            produto.estoque -= quantidade
 
             total += quantidade * preco_unitario
 
@@ -295,3 +302,23 @@ def register_routes(app):
         db.session.commit()
 
         return {"message": "Pedido cancelado com sucesso"}, 200
+
+    @app.route('/estoque/<int:produto_id>', methods=['PUT'])
+    @jwt_required()
+    def atualizar_estoque(produto_id):
+
+        data = request.get_json()
+        quantidade = data.get("quantidade")
+
+        if quantidade is None:
+            return {"erro": "Quantidade não informada"}, 400
+
+        produto = Product.query.get(produto_id)
+
+        if not produto:
+            return {"erro": "Produto não encontrado"}, 404
+
+        produto.estoque = quantidade
+        db.session.commit()
+
+        return {"message": "Estoque atualizado com sucesso"}, 200
