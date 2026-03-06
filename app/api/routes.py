@@ -9,7 +9,7 @@ from app.domain.pedido import Pedido
 from app.domain.pedido_item import PedidoItem
 from app.domain.pedido import STATUS_PEDIDO
 from app.domain.product import Product
-
+from datetime import datetime
 
 def register_routes(app):
 
@@ -242,6 +242,8 @@ def register_routes(app):
             "valor_total": novo_pedido.valor_total
         }, 201
 
+
+
     @app.route('/pedidos', methods=['GET'])
     @jwt_required()
     def listar_pedidos():
@@ -266,6 +268,7 @@ def register_routes(app):
 
         return resultado, 200
 
+
     @app.route('/pedido/<int:pedido_id>/status', methods=['PUT'])
     @jwt_required()
     def atualizar_status(pedido_id):
@@ -284,10 +287,30 @@ def register_routes(app):
         if not pedido:
             return {"erro": "Pedido não encontrado"}, 404
 
+        # Fluxo permitido de status
+        transicoes_permitidas = {
+            "pendente": ["pago", "cancelado"],
+            "pago": ["cozinha", "cancelado"],
+            "cozinha": ["pronto"],
+            "pronto": ["entregue"],
+            "entregue": [],
+            "cancelado": []
+        }
+
+        status_atual = pedido.status
+
+        if novo_status not in transicoes_permitidas.get(status_atual, []):
+            return {
+                "erro": f"Transição inválida de '{status_atual}' para '{novo_status}'"
+            }, 400
+
         pedido.status = novo_status
         db.session.commit()
 
-        return {"message": "Status atualizado com sucesso"}, 200
+        return {
+            "message": "Status atualizado com sucesso",
+            "status_atual": pedido.status
+        }, 200
 
     @app.route('/pedido/<int:pedido_id>/cancelar', methods=['PUT'])
     @jwt_required()
@@ -302,6 +325,50 @@ def register_routes(app):
         db.session.commit()
 
         return {"message": "Pedido cancelado com sucesso"}, 200
+
+
+    @app.route('/meus-pedidos', methods=['GET'])
+    @jwt_required()
+    def meus_pedidos():
+
+        user_id = int(get_jwt_identity())
+
+        pedidos = Pedido.query.filter_by(user_id=user_id).all()
+
+        resultado = []
+
+        for pedido in pedidos:
+            resultado.append({
+                "id": pedido.id,
+                "unidade_id": pedido.unidade_id,
+                "status": pedido.status,
+                "canal": pedido.canal,
+                "valor_total": pedido.valor_total
+            })
+
+        return resultado, 200
+
+
+    @app.route('/unidades/<int:unidade_id>/pedidos', methods=['GET'])
+    @jwt_required()
+    def pedidos_por_unidade(unidade_id):
+
+        pedidos = Pedido.query.filter_by(unidade_id=unidade_id).all()
+
+        resultado = []
+
+        for pedido in pedidos:
+            resultado.append({
+                "id": pedido.id,
+                "user_id": pedido.user_id,
+                "status": pedido.status,
+                "canal": pedido.canal,
+                "valor_total": pedido.valor_total
+            })
+
+        return resultado, 200
+
+
 
     @app.route('/estoque/<int:produto_id>', methods=['PUT'])
     @jwt_required()
@@ -322,3 +389,40 @@ def register_routes(app):
         db.session.commit()
 
         return {"message": "Estoque atualizado com sucesso"}, 200
+
+
+    @app.route('/pedidos/<int:pedido_id>/pagamento', methods=['POST'])
+    @jwt_required()
+    def pagamento_mock(pedido_id):
+
+        data = request.get_json()
+        resultado = data.get("resultado")
+
+        if not resultado:
+            return {"erro": "Resultado não informado"}, 400
+
+        pedido = Pedido.query.get(pedido_id)
+
+        if not pedido:
+            return {"erro": "Pedido não encontrado"}, 404
+
+        if pedido.status != "pendente":
+            return {"erro": "Pedido já processado"}, 409
+
+        if resultado == "aprovado":
+            pedido.status = "pago"
+            pedido.data_pagamento = datetime.utcnow()
+
+        elif resultado == "recusado":
+            pedido.status = "cancelado"
+
+        else:
+            return {"erro": "Resultado inválido"}, 400
+
+        db.session.commit()
+
+        return {
+            "message": "Pagamento aprovado",
+            "pedido_id": pedido.id,
+            "status": pedido.status
+        }, 200

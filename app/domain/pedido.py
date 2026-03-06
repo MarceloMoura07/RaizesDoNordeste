@@ -3,6 +3,7 @@ from datetime import datetime
 
 STATUS_PEDIDO = [
         "pendente",
+        "pago",
         "cozinha",
         "pronto",
         "entregue",
@@ -24,6 +25,8 @@ class Pedido(db.Model):
     valor_total = db.Column(db.Float, default=0.0)
 
     data_criacao = db.Column(db.DateTime, default=datetime.utcnow)
+
+    data_pagamento = db.Column(db.DateTime)
 
     itens = db.relationship("PedidoItem", backref="pedido", lazy=True)
 
