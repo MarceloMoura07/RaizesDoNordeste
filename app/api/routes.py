@@ -234,6 +234,12 @@ def register_routes(app):
 
         novo_pedido.valor_total = total
 
+        user = User.query.get(user_id)
+
+        if user.fidelidade_ativa:
+            pontos_ganhos = int(total / 10)
+            user.pontos += pontos_ganhos
+
         db.session.commit()
 
         return {
@@ -425,4 +431,74 @@ def register_routes(app):
             "message": "Pagamento aprovado",
             "pedido_id": pedido.id,
             "status": pedido.status
+        }, 200
+
+    @app.route('/ativar-fidelidade', methods=['POST'])
+    @jwt_required()
+    def ativar_fidelidade():
+
+        user_id = int(get_jwt_identity())
+
+        user = User.query.get(user_id)
+
+        if not user:
+            return {"erro": "Usuário não encontrado"}, 404
+
+        user.fidelidade_ativa = True
+
+        db.session.commit()
+
+        return {"message": "Programa de fidelidade ativado"}, 200
+
+
+    @app.route('/meus-pontos', methods=['GET'])
+    @jwt_required()
+    def meus_pontos():
+
+        user_id = int(get_jwt_identity())
+
+        user = User.query.get(user_id)
+
+        if not user:
+            return {"erro": "Usuário não encontrado"}, 404
+
+        return {
+            "user_id": user.id,
+            "pontos": user.pontos
+        }, 200
+
+    @app.route('/resgatar-pontos', methods=['POST'])
+    @jwt_required()
+    def resgatar_pontos():
+
+        data = request.get_json()
+        pontos = data.get("pontos")
+
+        if not pontos:
+            return {"erro": "Quantidade de pontos não informada"}, 400
+
+        if pontos % 10 != 0:
+            return {"erro": "Resgate deve ser múltiplo de 10 pontos"}, 400
+
+        user_id = int(get_jwt_identity())
+
+        user = User.query.get(user_id)
+
+        if not user:
+            return {"erro": "Usuário não encontrado"}, 404
+
+        if user.pontos < pontos:
+            return {"erro": "Pontos insuficientes"}, 409
+
+        desconto = (pontos / 10) * 5
+
+        user.pontos -= pontos
+
+        db.session.commit()
+
+        return {
+            "message": "Pontos resgatados com sucesso",
+            "pontos_utilizados": pontos,
+            "desconto": desconto,
+            "pontos_restantes": user.pontos
         }, 200

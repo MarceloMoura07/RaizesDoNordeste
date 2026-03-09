@@ -12,6 +12,9 @@ class User(db.Model):
     senha = db.Column(db.String(200), nullable=False)
     role = db.Column(db.String(20), nullable=False, default="CLIENTE")
 
+    fidelidade_ativa = db.Column(db.Boolean, default=False)
+    pontos = db.Column(db.Integer, default=0)
+
     def set_senha(self, senha):
         self.senha = bcrypt.generate_password_hash(senha).decode('utf-8')
 
