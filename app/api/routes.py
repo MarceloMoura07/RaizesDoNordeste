@@ -53,7 +53,7 @@ def register_routes(app):
         if not nome or not email or not password:
             return {"erro": "Dados incompletos"}, 400
 
-        # 🔹 Evita criar usuário duplicado
+
         if User.query.filter_by(email=email).first():
             return {"erro": "E-mail já cadastrado"}, 409
 
@@ -149,6 +149,11 @@ def register_routes(app):
         if not nome or not preco or not unidade_id:
             return {"erro": "Dados incompletos"}, 400
 
+        unidade = Unidade.query.get(unidade_id)
+
+        if not unidade:
+            return {"erro": "Unidade não encontrada"}, 404
+
         novo_produto = Product(
             nome=nome,
             preco=preco,
@@ -186,8 +191,16 @@ def register_routes(app):
         canal = data.get("canal")
         itens = data.get("itens")
 
-        if not unidade_id or not canal or not itens:
+        if not unidade_id or not canal or itens is None:
             return {"erro": "Dados incompletos"}, 400
+
+        if len(itens) == 0:
+            return {"erro": "Pedido deve conter ao menos um item"}, 400
+
+        unidade = Unidade.query.get(unidade_id)
+
+        if not unidade:
+            return {"erro": "Unidade não encontrada"}, 404
 
         user_id = int(get_jwt_identity())
 
@@ -201,6 +214,8 @@ def register_routes(app):
         db.session.flush()  # garante que já temos o ID sem precisar commit
 
         total = 0
+        desconto = 0
+        valor_final = 0
 
         for item in itens:
 
@@ -208,6 +223,9 @@ def register_routes(app):
 
             if not produto:
                 return {"erro": "Produto não encontrado"}, 404
+
+            if produto.unidade_id != unidade_id:
+                return {"erro": "Produto não pertence a esta unidade"}, 400
 
             quantidade = item.get("quantidade")
 
@@ -232,6 +250,13 @@ def register_routes(app):
 
             total += quantidade * preco_unitario
 
+            desconto = 0
+
+            if canal == "app":
+                desconto = total * 0.10
+
+            valor_final = total - desconto
+
         novo_pedido.valor_total = total
 
         user = User.query.get(user_id)
@@ -245,7 +270,8 @@ def register_routes(app):
         return {
             "message": "Pedido criado com sucesso",
             "pedido_id": novo_pedido.id,
-            "valor_total": novo_pedido.valor_total
+            "valor_total": valor_final,
+            "desconto": desconto
         }, 201
 
 
