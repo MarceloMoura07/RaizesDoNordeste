@@ -10,6 +10,9 @@ from app.domain.pedido_item import PedidoItem
 from app.domain.pedido import STATUS_PEDIDO
 from app.domain.product import Product
 from datetime import datetime
+from logs import logger
+
+
 
 def register_routes(app):
 
@@ -69,6 +72,8 @@ def register_routes(app):
         db.session.add(new_user)
         db.session.commit()
 
+        logger.info(f"Novo usuário criado: {email}")
+
         return {
             "message": "Usuário criado com sucesso",
             "role": new_user.role
@@ -97,6 +102,8 @@ def register_routes(app):
             return {"erro": "Senha incorreta"}, 401
 
         access_token = create_access_token(identity=str(user.id))
+
+        logger.info(f"Login realizado: {email}")
 
         return {
             "message": "Login realizado com sucesso",
@@ -266,6 +273,8 @@ def register_routes(app):
             user.pontos += pontos_ganhos
 
         db.session.commit()
+
+        logger.info(f"Pedido {novo_pedido.id} criado pelo usuário {user_id} na unidade {unidade_id}")
 
         return {
             "message": "Pedido criado com sucesso",
@@ -444,17 +453,21 @@ def register_routes(app):
         if resultado == "aprovado":
             pedido.status = "pago"
             pedido.data_pagamento = datetime.utcnow()
+            mensagem = "Pagamento aprovado"
 
         elif resultado == "recusado":
             pedido.status = "cancelado"
+            mensagem = "Pagamento recusado"
 
         else:
             return {"erro": "Resultado inválido"}, 400
 
         db.session.commit()
 
+        logger.info(f"Pagamento do pedido {pedido_id} processado com resultado: {pedido.status}")
+
         return {
-            "message": "Pagamento aprovado",
+            "message": mensagem,
             "pedido_id": pedido.id,
             "status": pedido.status
         }, 200
