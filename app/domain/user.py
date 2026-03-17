@@ -15,6 +15,8 @@ class User(db.Model):
     fidelidade_ativa = db.Column(db.Boolean, default=False)
     pontos = db.Column(db.Integer, default=0)
 
+    # Segurança: a senha nunca é armazenada em texto puro.
+    # O bcrypt gera um hash criptográfico para armazenamento seguro.
     def set_senha(self, senha):
         self.senha = bcrypt.generate_password_hash(senha).decode('utf-8')
 

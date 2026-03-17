@@ -8,16 +8,20 @@ from app.domain.pedido import Pedido
 from app.domain.pedido_item import PedidoItem
 
 
+# Factory da aplicação Flask: centraliza a configuração e inicialização das extensões
 def create_app():
     app = Flask(__name__)
     app.config.from_object("config.Config")
-    app.config["JWT_SECRET_KEY"] = "chave-super-simples"
+
 
     db.init_app(app)
     bcrypt.init_app(app)
     jwt = JWTManager(app)
+
+    # Registro das rotas da API
     register_routes(app)
 
+    # Configuração do Swagger para documentação automática da API
     swagger_config = {
         "headers": [],
         "specs": [
@@ -54,6 +58,7 @@ def create_app():
 
     Swagger(app, config=swagger_config, template=swagger_template)
 
+    # Cria automaticamente as tabelas do banco ao iniciar a aplicação
     with app.app_context():
         db.create_all()
 
@@ -61,5 +66,6 @@ def create_app():
 
 app = create_app()
 
+# Executa a aplicação em modo de desenvolvimento
 if __name__ == "__main__":
     app.run(debug=True)

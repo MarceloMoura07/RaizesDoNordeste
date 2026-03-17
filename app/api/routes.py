@@ -13,7 +13,8 @@ from datetime import datetime
 from logs import logger
 
 
-
+# Registra todas as rotas da API no objeto Flask.
+# Esse padrão centraliza os endpoints em um único módulo.
 def register_routes(app):
 
     @app.route("/")
@@ -31,6 +32,8 @@ def register_routes(app):
     ---
     tags:
       - Unidades
+    security:
+      - BearerAuth: []
     description: Cria uma nova unidade da empresa informando nome e cidade.
     parameters:
       - in: body
@@ -126,7 +129,7 @@ def register_routes(app):
         nome = data.get("nome")
         email = data.get("email")
         password = data.get("password")
-        role = data.get("role", "CLIENTE")  # 🔹 novo campo opcional
+        role = data.get("role", "CLIENTE")
 
         if not nome or not email or not password:
             return {"erro": "Dados incompletos"}, 400
@@ -135,6 +138,7 @@ def register_routes(app):
         if User.query.filter_by(email=email).first():
             return {"erro": "E-mail já cadastrado"}, 409
 
+        # Gera hash da senha para armazenar de forma segura no banco (não salvamos senha em texto puro)
         hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
 
         new_user = User(
@@ -147,6 +151,7 @@ def register_routes(app):
         db.session.add(new_user)
         db.session.commit()
 
+        # Logs de auditoria para registrar ações importantes do sistema
         logger.info(f"Novo usuário criado: {email}")
 
         return {
@@ -178,7 +183,7 @@ def register_routes(app):
                       example: usuario@email.com
                     password:
                       type: string
-                      example: 123456
+                      example: "123456"
             responses:
               200:
                 description: Login realizado com sucesso
@@ -217,6 +222,7 @@ def register_routes(app):
         if not bcrypt.check_password_hash(user.senha, password):
             return {"erro": "Senha incorreta"}, 401
 
+        # Cria token JWT que será usado para autenticar o usuário nas rotas protegidas
         access_token = create_access_token(identity=str(user.id))
 
         logger.info(f"Login realizado: {email}")
@@ -290,6 +296,8 @@ def register_routes(app):
     ---
     tags:
       - Produtos
+    security:
+      - BearerAuth: []
     description: "Cria um novo produto associado a uma unidade."
     parameters:
       - in: body
@@ -418,6 +426,8 @@ def register_routes(app):
             ---
             tags:
               - Pedidos
+            security:
+              - BearerAuth: []
             description: Cria um pedido com múltiplos itens e calcula o valor total com possível desconto.
             parameters:
               - in: body
@@ -545,15 +555,20 @@ def register_routes(app):
 
             desconto = 0
 
+        # Regra de negócio: pedidos feitos pelo app recebem 10% de desconto
         if canal == "app":
             desconto = total * 0.10
 
         valor_final = total - desconto
+        desconto = round(desconto, 2)
+        valor_final = round(valor_final, 2)
 
         novo_pedido.valor_total = total
 
         user = User.query.get(user_id)
 
+        # Se o usuário participa do programa de fidelidade, ele ganha pontos
+        # a cada R$10 gastos no pedido
         if user.fidelidade_ativa:
             pontos_ganhos = int(total / 10)
             user.pontos += pontos_ganhos
@@ -579,6 +594,8 @@ def register_routes(app):
             ---
             tags:
               - Pedidos
+            security:
+              - BearerAuth: []
             description: Retorna todos os pedidos cadastrados. Pode filtrar por canal do pedido.
             parameters:
               - in: query
@@ -635,6 +652,8 @@ def register_routes(app):
             ---
             tags:
               - Pedidos
+            security:
+              - BearerAuth: []
             description: Atualiza o status de um pedido respeitando o fluxo permitido de transições.
             parameters:
               - in: path
@@ -720,6 +739,8 @@ def register_routes(app):
             ---
             tags:
               - Pedidos
+            security:
+              - BearerAuth: []
             description: Altera o status do pedido para cancelado.
             parameters:
               - in: path
@@ -760,6 +781,8 @@ def register_routes(app):
            ---
            tags:
              - Pedidos
+           security:
+             - BearerAuth: []
            description: Retorna todos os pedidos realizados pelo usuário logado.
            responses:
              200:
@@ -814,6 +837,8 @@ def register_routes(app):
             ---
             tags:
               - Pedidos
+            security:
+              - BearerAuth: []
             description: Retorna todos os pedidos realizados em uma unidade específica.
             parameters:
               - in: path
@@ -874,6 +899,8 @@ def register_routes(app):
             ---
             tags:
               - Produtos
+            security:
+              - BearerAuth: []
             description: "Atualiza a quantidade em estoque de um produto específico."
             parameters:
               - in: path
@@ -936,6 +963,8 @@ def register_routes(app):
             ---
             tags:
               - Pagamentos
+            security:
+              - BearerAuth: []
             description: "Simula o processamento de pagamento de um pedido. Pode retornar aprovado ou recusado."
             parameters:
               - in: path
@@ -995,6 +1024,8 @@ def register_routes(app):
         if pedido.status != "pendente":
             return {"erro": "Pedido já processado"}, 409
 
+        # Simulação de integração com gateway de pagamento
+        # altera o status do pedido conforme resultado
         if resultado == "aprovado":
             pedido.status = "pago"
             pedido.data_pagamento = datetime.utcnow()
@@ -1025,6 +1056,8 @@ def register_routes(app):
             ---
             tags:
               - Fidelidade
+            security:
+              - BearerAuth: []
             description: "Ativa o programa de fidelidade para o usuário autenticado."
             responses:
               200:
@@ -1063,6 +1096,8 @@ def register_routes(app):
             ---
             tags:
               - Fidelidade
+            security:
+              - BearerAuth: []
             description: "Retorna a quantidade de pontos acumulados pelo usuário autenticado."
             responses:
               200:
@@ -1102,6 +1137,8 @@ def register_routes(app):
             ---
             tags:
               - Fidelidade
+            security:
+              - BearerAuth: []
             description: "Permite ao usuário trocar pontos acumulados por desconto."
             parameters:
               - in: body
@@ -1163,6 +1200,7 @@ def register_routes(app):
         if user.pontos < pontos:
             return {"erro": "Pontos insuficientes"}, 409
 
+        # Regra de fidelidade: cada 10 pontos geram R$5 de desconto
         desconto = (pontos / 10) * 5
 
         user.pontos -= pontos

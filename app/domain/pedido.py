@@ -1,6 +1,8 @@
 from app.infrastructure.database import db
 from datetime import datetime
 
+# Fluxo possível de estados de um pedido no sistema.
+# Usado para validação das transições de status durante o processamento do pedido.
 STATUS_PEDIDO = [
         "pendente",
         "pago",
