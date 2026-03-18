@@ -12,6 +12,14 @@ STATUS_PEDIDO = [
         "cancelado"
     ]
 
+CANAIS_PEDIDO = [
+        "APP",
+        "TOTEM",
+        "BALCAO",
+        "PICKUP",
+        "WEB"
+    ]
+
 class Pedido(db.Model):
     __tablename__ = "pedidos"
 

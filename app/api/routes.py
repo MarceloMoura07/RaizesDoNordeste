@@ -5,7 +5,7 @@ from app.infrastructure.database import db
 from app.domain.user import User, bcrypt
 from sqlalchemy import func
 from app.domain.product import Product
-from app.domain.pedido import Pedido
+from app.domain.pedido import Pedido, CANAIS_PEDIDO
 from app.domain.pedido_item import PedidoItem
 from app.domain.pedido import STATUS_PEDIDO
 from app.domain.product import Product
@@ -445,8 +445,14 @@ def register_routes(app):
                       example: 1
                     canal:
                       type: string
-                      example: app
-                      description: "Canal do pedido (ex: app ou loja)"
+                      example: APP
+                      description: "Canal do pedido"
+                      enum:
+                        - APP
+                        - TOTEM
+                        - BALCAO
+                        - PICKUP
+                        - WEB
                     itens:
                       type: array
                       description: Lista de produtos do pedido
@@ -491,7 +497,12 @@ def register_routes(app):
         data = request.get_json()
 
         unidade_id = data.get("unidade_id")
-        canal = data.get("canal")
+        canal = data.get("canal", "").upper()
+
+        # Valida se o canal informado está dentro dos valores permitidos
+        if canal not in CANAIS_PEDIDO:
+            return {"erro": "Canal inválido"}, 400
+
         itens = data.get("itens")
 
         if not unidade_id or not canal or itens is None:
@@ -556,7 +567,7 @@ def register_routes(app):
             desconto = 0
 
         # Regra de negócio: pedidos feitos pelo app recebem 10% de desconto
-        if canal == "app":
+        if canal == "APP":
             desconto = total * 0.10
 
         valor_final = total - desconto
@@ -602,7 +613,7 @@ def register_routes(app):
                 name: canalPedido
                 type: string
                 required: false
-                description: "Filtra pedidos pelo canal (ex: app ou loja)"
+                description: "Filtra pedidos pelo canal"
                 example: app
             responses:
               200:
