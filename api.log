@@ -1,0 +1,1327 @@
+2026-03-12 20:10:00,505 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-12 20:10:00,505 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-12 20:10:00,517 - INFO -  * Restarting with stat
+2026-03-12 20:10:02,073 - WARNING -  * Debugger is active!
+2026-03-12 20:10:02,088 - INFO -  * Debugger PIN: 268-760-856
+2026-03-12 20:11:50,124 - INFO - 127.0.0.1 - - [12/Mar/2026 20:11:50] "GET / HTTP/1.1" 200 -
+2026-03-12 20:11:50,423 - INFO - 127.0.0.1 - - [12/Mar/2026 20:11:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-12 20:14:47,533 - INFO - 127.0.0.1 - - [12/Mar/2026 20:14:47] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+2026-03-12 20:15:03,264 - INFO - 127.0.0.1 - - [12/Mar/2026 20:15:03] "[31m[1mPOST /register HTTP/1.1[0m" 409 -
+2026-03-12 20:15:29,090 - INFO - 127.0.0.1 - - [12/Mar/2026 20:15:29] "[33mGET /register/1 HTTP/1.1[0m" 404 -
+2026-03-12 20:17:21,952 - INFO - Login realizado: cliente@teste.com
+2026-03-12 20:17:21,954 - INFO - 127.0.0.1 - - [12/Mar/2026 20:17:21] "POST /login HTTP/1.1" 200 -
+2026-03-12 20:19:34,049 - INFO - 127.0.0.1 - - [12/Mar/2026 20:19:34] "[35m[1mPOST /unidades HTTP/1.1[0m" 201 -
+2026-03-12 20:20:46,775 - INFO - 127.0.0.1 - - [12/Mar/2026 20:20:46] "[33mPOST /produtos HTTP/1.1[0m" 404 -
+2026-03-12 20:20:53,496 - INFO - 127.0.0.1 - - [12/Mar/2026 20:20:53] "[33mPOST /produtos HTTP/1.1[0m" 404 -
+2026-03-12 20:21:01,681 - INFO - 127.0.0.1 - - [12/Mar/2026 20:21:01] "[35m[1mPOST /produtos HTTP/1.1[0m" 201 -
+2026-03-12 20:22:46,930 - INFO - 127.0.0.1 - - [12/Mar/2026 20:22:46] "[31m[1mPOST /pedidos HTTP/1.1[0m" 400 -
+2026-03-12 20:23:03,908 - INFO - 127.0.0.1 - - [12/Mar/2026 20:23:03] "[31m[1mPOST /pedidos HTTP/1.1[0m" 409 -
+2026-03-12 20:23:13,039 - INFO - 127.0.0.1 - - [12/Mar/2026 20:23:13] "[33mPOST /pedidos HTTP/1.1[0m" 404 -
+2026-03-12 20:23:24,010 - INFO - 127.0.0.1 - - [12/Mar/2026 20:23:24] "[33mPOST /pedidos HTTP/1.1[0m" 404 -
+2026-03-12 20:23:31,148 - INFO - 127.0.0.1 - - [12/Mar/2026 20:23:31] "[31m[1mPOST /pedidos HTTP/1.1[0m" 409 -
+2026-03-12 20:23:37,481 - INFO - 127.0.0.1 - - [12/Mar/2026 20:23:37] "[31m[1mPOST /pedidos HTTP/1.1[0m" 400 -
+2026-03-12 20:23:48,526 - INFO - 127.0.0.1 - - [12/Mar/2026 20:23:48] "[31m[1mPOST /pedidos HTTP/1.1[0m" 400 -
+2026-03-12 20:23:54,110 - INFO - 127.0.0.1 - - [12/Mar/2026 20:23:54] "[31m[1mPOST /pedidos HTTP/1.1[0m" 400 -
+2026-03-12 20:24:34,198 - INFO - 127.0.0.1 - - [12/Mar/2026 20:24:34] "[33mPOST /pedidos HTTP/1.1[0m" 404 -
+2026-03-12 20:24:40,421 - INFO - 127.0.0.1 - - [12/Mar/2026 20:24:40] "[31m[1mPOST /pedidos HTTP/1.1[0m" 409 -
+2026-03-12 20:24:47,145 - INFO - 127.0.0.1 - - [12/Mar/2026 20:24:47] "[31m[1mPOST /pedidos HTTP/1.1[0m" 409 -
+2026-03-12 20:25:00,584 - INFO - 127.0.0.1 - - [12/Mar/2026 20:25:00] "[33mPOST /pedidos HTTP/1.1[0m" 404 -
+2026-03-12 20:25:11,145 - INFO - 127.0.0.1 - - [12/Mar/2026 20:25:11] "[31m[1mPOST /pedidos HTTP/1.1[0m" 400 -
+2026-03-12 20:25:18,445 - INFO - 127.0.0.1 - - [12/Mar/2026 20:25:18] "[31m[1mPOST /pedidos HTTP/1.1[0m" 400 -
+2026-03-12 20:25:23,813 - INFO - 127.0.0.1 - - [12/Mar/2026 20:25:23] "[31m[1mPOST /pedidos HTTP/1.1[0m" 400 -
+2026-03-12 20:26:14,820 - INFO - 127.0.0.1 - - [12/Mar/2026 20:26:14] "[31m[1mPOST /pedidos HTTP/1.1[0m" 400 -
+2026-03-12 20:26:21,650 - INFO - Pedido 10 criado pelo usuário 2 na unidade 1
+2026-03-12 20:26:21,651 - INFO - 127.0.0.1 - - [12/Mar/2026 20:26:21] "[35m[1mPOST /pedidos HTTP/1.1[0m" 201 -
+2026-03-12 20:28:47,527 - INFO - Pagamento do pedido 10 processado com resultado: pago
+2026-03-12 20:28:47,528 - INFO - 127.0.0.1 - - [12/Mar/2026 20:28:47] "POST /pedidos/10/pagamento HTTP/1.1" 200 -
+2026-03-12 20:29:32,068 - INFO - Pagamento do pedido 9 processado com resultado: cancelado
+2026-03-12 20:29:32,069 - INFO - 127.0.0.1 - - [12/Mar/2026 20:29:32] "POST /pedidos/9/pagamento HTTP/1.1" 200 -
+2026-03-12 20:35:37,585 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-12 20:35:37,828 - INFO -  * Restarting with stat
+2026-03-12 20:35:39,986 - WARNING -  * Debugger is active!
+2026-03-12 20:35:40,002 - INFO -  * Debugger PIN: 268-760-856
+2026-03-12 20:37:06,223 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-12 20:37:06,407 - INFO -  * Restarting with stat
+2026-03-12 20:37:08,246 - WARNING -  * Debugger is active!
+2026-03-12 20:37:08,260 - INFO -  * Debugger PIN: 268-760-856
+2026-03-12 20:37:35,615 - INFO - 127.0.0.1 - - [12/Mar/2026 20:37:35] "[31m[1mPOST /pedidos/8/pagamento HTTP/1.1[0m" 401 -
+2026-03-12 20:38:26,983 - INFO - 127.0.0.1 - - [12/Mar/2026 20:38:26] "[31m[1mPOST /login HTTP/1.1[0m" 400 -
+2026-03-12 20:38:35,841 - INFO - Login realizado: cliente@teste.com
+2026-03-12 20:38:35,841 - INFO - 127.0.0.1 - - [12/Mar/2026 20:38:35] "POST /login HTTP/1.1" 200 -
+2026-03-12 20:40:11,626 - INFO - 127.0.0.1 - - [12/Mar/2026 20:40:11] "[31m[1mPOST /pedidos/8/pagamento HTTP/1.1[0m" 400 -
+2026-03-12 20:40:54,536 - INFO - Pagamento do pedido 8 processado com resultado: cancelado
+2026-03-12 20:40:54,536 - INFO - 127.0.0.1 - - [12/Mar/2026 20:40:54] "POST /pedidos/8/pagamento HTTP/1.1" 200 -
+2026-03-13 13:48:49,350 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-13 13:48:49,351 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-13 13:48:49,362 - INFO -  * Restarting with stat
+2026-03-13 13:48:51,113 - WARNING -  * Debugger is active!
+2026-03-13 13:48:51,128 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 13:49:28,650 - INFO - 127.0.0.1 - - [13/Mar/2026 13:49:28] "[32mGET /apidocs HTTP/1.1[0m" 308 -
+2026-03-13 13:49:28,725 - INFO - 127.0.0.1 - - [13/Mar/2026 13:49:28] "GET /apidocs/ HTTP/1.1" 200 -
+2026-03-13 13:49:29,132 - INFO - 127.0.0.1 - - [13/Mar/2026 13:49:29] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 200 -
+2026-03-13 13:49:29,451 - INFO - 127.0.0.1 - - [13/Mar/2026 13:49:29] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+2026-03-13 13:49:29,486 - INFO - 127.0.0.1 - - [13/Mar/2026 13:49:29] "GET /flasgger_static/lib/jquery.min.js HTTP/1.1" 200 -
+2026-03-13 13:49:29,488 - INFO - 127.0.0.1 - - [13/Mar/2026 13:49:29] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2026-03-13 13:49:30,198 - INFO - 127.0.0.1 - - [13/Mar/2026 13:49:30] "GET /apispec_1.json HTTP/1.1" 200 -
+2026-03-13 13:49:30,231 - INFO - 127.0.0.1 - - [13/Mar/2026 13:49:30] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -
+2026-03-13 13:53:57,332 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 13:53:57,709 - INFO -  * Restarting with stat
+2026-03-13 13:54:00,408 - WARNING -  * Debugger is active!
+2026-03-13 13:54:00,427 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 13:55:02,568 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 13:55:02,883 - INFO -  * Restarting with stat
+2026-03-13 13:55:05,407 - WARNING -  * Debugger is active!
+2026-03-13 13:55:05,422 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 13:58:45,040 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 13:58:45,316 - INFO -  * Restarting with stat
+2026-03-13 13:58:48,748 - WARNING -  * Debugger is active!
+2026-03-13 13:58:48,766 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 14:02:12,551 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 14:02:13,160 - INFO -  * Restarting with stat
+2026-03-13 14:02:18,650 - WARNING -  * Debugger is active!
+2026-03-13 14:02:18,670 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 14:03:13,054 - INFO - 127.0.0.1 - - [13/Mar/2026 14:03:13] "[33mGET /apidocs/register HTTP/1.1[0m" 404 -
+2026-03-13 14:03:13,188 - INFO - 127.0.0.1 - - [13/Mar/2026 14:03:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-13 14:03:29,008 - INFO - 127.0.0.1 - - [13/Mar/2026 14:03:29] "GET /apidocs/ HTTP/1.1" 200 -
+2026-03-13 14:03:29,565 - INFO - 127.0.0.1 - - [13/Mar/2026 14:03:29] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 14:03:29,734 - INFO - 127.0.0.1 - - [13/Mar/2026 14:03:29] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 14:03:29,773 - INFO - 127.0.0.1 - - [13/Mar/2026 14:03:29] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 14:03:29,784 - INFO - 127.0.0.1 - - [13/Mar/2026 14:03:29] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 14:03:30,303 - INFO - 127.0.0.1 - - [13/Mar/2026 14:03:30] "GET /apispec_1.json HTTP/1.1" 200 -
+2026-03-13 14:04:14,052 - INFO - 127.0.0.1 - - [13/Mar/2026 14:04:14] "GET /apidocs/ HTTP/1.1" 200 -
+2026-03-13 14:04:14,355 - INFO - 127.0.0.1 - - [13/Mar/2026 14:04:14] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 14:04:14,419 - INFO - 127.0.0.1 - - [13/Mar/2026 14:04:14] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 14:04:14,424 - INFO - 127.0.0.1 - - [13/Mar/2026 14:04:14] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 14:04:14,426 - INFO - 127.0.0.1 - - [13/Mar/2026 14:04:14] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 14:04:14,843 - INFO - 127.0.0.1 - - [13/Mar/2026 14:04:14] "GET /apispec_1.json HTTP/1.1" 200 -
+2026-03-13 14:04:14,851 - INFO - 127.0.0.1 - - [13/Mar/2026 14:04:14] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-13 14:09:26,431 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 14:09:26,685 - INFO -  * Restarting with stat
+2026-03-13 14:09:29,054 - WARNING -  * Debugger is active!
+2026-03-13 14:09:29,069 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 14:18:10,793 - INFO - 127.0.0.1 - - [13/Mar/2026 14:18:10] "GET /apidocs/ HTTP/1.1" 200 -
+2026-03-13 14:18:11,092 - INFO - 127.0.0.1 - - [13/Mar/2026 14:18:11] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 14:18:11,188 - INFO - 127.0.0.1 - - [13/Mar/2026 14:18:11] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 14:18:11,191 - INFO - 127.0.0.1 - - [13/Mar/2026 14:18:11] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 14:18:11,230 - INFO - 127.0.0.1 - - [13/Mar/2026 14:18:11] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 14:18:11,773 - INFO - 127.0.0.1 - - [13/Mar/2026 14:18:11] "GET /apispec_1.json HTTP/1.1" 200 -
+2026-03-13 14:18:11,792 - INFO - 127.0.0.1 - - [13/Mar/2026 14:18:11] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-13 14:19:49,415 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 14:19:49,642 - INFO -  * Restarting with stat
+2026-03-13 14:19:52,664 - WARNING -  * Debugger is active!
+2026-03-13 14:19:52,680 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 14:30:13,160 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 14:30:13,368 - INFO -  * Restarting with stat
+2026-03-13 14:30:16,278 - WARNING -  * Debugger is active!
+2026-03-13 14:30:16,298 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 14:30:25,257 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 14:30:26,667 - INFO -  * Restarting with stat
+2026-03-13 14:30:31,059 - WARNING -  * Debugger is active!
+2026-03-13 14:30:31,080 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 14:36:33,294 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 14:36:33,487 - INFO -  * Restarting with stat
+2026-03-13 14:36:35,697 - WARNING -  * Debugger is active!
+2026-03-13 14:36:35,715 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 14:37:32,661 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 14:37:32,993 - INFO -  * Restarting with stat
+2026-03-13 14:37:35,233 - WARNING -  * Debugger is active!
+2026-03-13 14:37:35,249 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 14:37:46,474 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 14:37:46,668 - INFO -  * Restarting with stat
+2026-03-13 14:37:51,169 - WARNING -  * Debugger is active!
+2026-03-13 14:37:51,189 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 14:40:50,942 - INFO - 127.0.0.1 - - [13/Mar/2026 14:40:50] "GET /apidocs/ HTTP/1.1" 200 -
+2026-03-13 14:40:51,248 - INFO - 127.0.0.1 - - [13/Mar/2026 14:40:51] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 14:40:51,324 - INFO - 127.0.0.1 - - [13/Mar/2026 14:40:51] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 14:40:51,325 - INFO - 127.0.0.1 - - [13/Mar/2026 14:40:51] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 14:40:51,352 - INFO - 127.0.0.1 - - [13/Mar/2026 14:40:51] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 14:40:52,144 - ERROR - jsonify failure; defaulting to json.dumps
+Traceback (most recent call last):
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\base.py", line 164, in get
+    return jsonify(self.loader())
+                   ~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\base.py", line 438, in get_apispecs
+    specs = get_specs(
+        self.get_url_mappings(spec.get('rule_filter')), ignore_verbs,
+        optional_fields, self.sanitizer,
+        openapi_version=openapi_version,
+        doc_dir=self.config.get('doc_dir'))
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\utils.py", line 180, in get_specs
+    doc_summary, doc_description, doc_swag = parse_docstring(
+                                             ~~~~~~~~~~~~~~~^
+        method, sanitizer, endpoint=rule.endpoint, verb=verb)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\utils.py", line 675, in parse_docstring
+    swag = yaml.safe_load(full_doc[yaml_sep + 4:])
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\__init__.py", line 81, in load
+    return loader.get_single_data()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 111, in compose_sequence_node
+    node.value.append(self.compose_node(node, index))
+                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\parser.py", line 98, in check_event
+    self.current_event = self.state()
+                         ~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+       ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\scanner.py", line 116, in check_token
+    self.fetch_more_tokens()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\scanner.py", line 223, in fetch_more_tokens
+    return self.fetch_value()
+           ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\scanner.py", line 577, in fetch_value
+    raise ScannerError(None, None,
+            "mapping values are not allowed here",
+            self.get_mark())
+yaml.scanner.ScannerError: mapping values are not allowed here
+  in "<unicode string>", line 21, column 43:
+     ... description: Canal do pedido (ex: app ou loja)
+                                         ^
+2026-03-13 14:40:52,151 - INFO - 127.0.0.1 - - [13/Mar/2026 14:40:52] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-13 14:40:52,354 - INFO - 127.0.0.1 - - [13/Mar/2026 14:40:52] "[35m[1mGET /apispec_1.json HTTP/1.1[0m" 500 -
+2026-03-13 14:40:58,139 - INFO - 127.0.0.1 - - [13/Mar/2026 14:40:58] "GET /apidocs/ HTTP/1.1" 200 -
+2026-03-13 14:40:58,443 - INFO - 127.0.0.1 - - [13/Mar/2026 14:40:58] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 14:40:58,507 - INFO - 127.0.0.1 - - [13/Mar/2026 14:40:58] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 14:40:58,510 - INFO - 127.0.0.1 - - [13/Mar/2026 14:40:58] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 14:40:58,515 - INFO - 127.0.0.1 - - [13/Mar/2026 14:40:58] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 14:40:59,018 - ERROR - jsonify failure; defaulting to json.dumps
+Traceback (most recent call last):
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\base.py", line 164, in get
+    return jsonify(self.loader())
+                   ~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\base.py", line 438, in get_apispecs
+    specs = get_specs(
+        self.get_url_mappings(spec.get('rule_filter')), ignore_verbs,
+        optional_fields, self.sanitizer,
+        openapi_version=openapi_version,
+        doc_dir=self.config.get('doc_dir'))
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\utils.py", line 180, in get_specs
+    doc_summary, doc_description, doc_swag = parse_docstring(
+                                             ~~~~~~~~~~~~~~~^
+        method, sanitizer, endpoint=rule.endpoint, verb=verb)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\utils.py", line 675, in parse_docstring
+    swag = yaml.safe_load(full_doc[yaml_sep + 4:])
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\__init__.py", line 81, in load
+    return loader.get_single_data()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 111, in compose_sequence_node
+    node.value.append(self.compose_node(node, index))
+                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\parser.py", line 98, in check_event
+    self.current_event = self.state()
+                         ~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+       ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\scanner.py", line 116, in check_token
+    self.fetch_more_tokens()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\scanner.py", line 223, in fetch_more_tokens
+    return self.fetch_value()
+           ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\scanner.py", line 577, in fetch_value
+    raise ScannerError(None, None,
+            "mapping values are not allowed here",
+            self.get_mark())
+yaml.scanner.ScannerError: mapping values are not allowed here
+  in "<unicode string>", line 21, column 43:
+     ... description: Canal do pedido (ex: app ou loja)
+                                         ^
+2026-03-13 14:40:59,027 - INFO - 127.0.0.1 - - [13/Mar/2026 14:40:59] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-13 14:40:59,134 - INFO - 127.0.0.1 - - [13/Mar/2026 14:40:59] "[35m[1mGET /apispec_1.json HTTP/1.1[0m" 500 -
+2026-03-13 14:41:38,215 - INFO - 127.0.0.1 - - [13/Mar/2026 14:41:38] "GET / HTTP/1.1" 200 -
+2026-03-13 14:41:44,371 - INFO - 127.0.0.1 - - [13/Mar/2026 14:41:44] "GET /apidocs/ HTTP/1.1" 200 -
+2026-03-13 14:41:44,682 - INFO - 127.0.0.1 - - [13/Mar/2026 14:41:44] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 14:41:44,752 - INFO - 127.0.0.1 - - [13/Mar/2026 14:41:44] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 14:41:44,753 - INFO - 127.0.0.1 - - [13/Mar/2026 14:41:44] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 14:41:44,754 - INFO - 127.0.0.1 - - [13/Mar/2026 14:41:44] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 14:41:45,282 - ERROR - jsonify failure; defaulting to json.dumps
+Traceback (most recent call last):
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\base.py", line 164, in get
+    return jsonify(self.loader())
+                   ~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\base.py", line 438, in get_apispecs
+    specs = get_specs(
+        self.get_url_mappings(spec.get('rule_filter')), ignore_verbs,
+        optional_fields, self.sanitizer,
+        openapi_version=openapi_version,
+        doc_dir=self.config.get('doc_dir'))
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\utils.py", line 180, in get_specs
+    doc_summary, doc_description, doc_swag = parse_docstring(
+                                             ~~~~~~~~~~~~~~~^
+        method, sanitizer, endpoint=rule.endpoint, verb=verb)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\utils.py", line 675, in parse_docstring
+    swag = yaml.safe_load(full_doc[yaml_sep + 4:])
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\__init__.py", line 81, in load
+    return loader.get_single_data()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 111, in compose_sequence_node
+    node.value.append(self.compose_node(node, index))
+                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\parser.py", line 98, in check_event
+    self.current_event = self.state()
+                         ~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+       ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\scanner.py", line 116, in check_token
+    self.fetch_more_tokens()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\scanner.py", line 223, in fetch_more_tokens
+    return self.fetch_value()
+           ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\scanner.py", line 577, in fetch_value
+    raise ScannerError(None, None,
+            "mapping values are not allowed here",
+            self.get_mark())
+yaml.scanner.ScannerError: mapping values are not allowed here
+  in "<unicode string>", line 21, column 43:
+     ... description: Canal do pedido (ex: app ou loja)
+                                         ^
+2026-03-13 14:41:45,394 - INFO - 127.0.0.1 - - [13/Mar/2026 14:41:45] "[35m[1mGET /apispec_1.json HTTP/1.1[0m" 500 -
+2026-03-13 14:42:32,787 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 14:42:33,108 - INFO -  * Restarting with stat
+2026-03-13 14:42:35,806 - WARNING -  * Debugger is active!
+2026-03-13 14:42:35,826 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 14:43:38,553 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 14:43:38,806 - INFO -  * Restarting with stat
+2026-03-13 14:43:41,399 - WARNING -  * Debugger is active!
+2026-03-13 14:43:41,416 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 14:49:27,159 - INFO - 127.0.0.1 - - [13/Mar/2026 14:49:27] "GET /apidocs/ HTTP/1.1" 200 -
+2026-03-13 14:49:27,449 - INFO - 127.0.0.1 - - [13/Mar/2026 14:49:27] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 14:49:27,538 - INFO - 127.0.0.1 - - [13/Mar/2026 14:49:27] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 14:49:27,542 - INFO - 127.0.0.1 - - [13/Mar/2026 14:49:27] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 14:49:27,615 - INFO - 127.0.0.1 - - [13/Mar/2026 14:49:27] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 14:49:28,235 - ERROR - jsonify failure; defaulting to json.dumps
+Traceback (most recent call last):
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\base.py", line 164, in get
+    return jsonify(self.loader())
+                   ~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\base.py", line 438, in get_apispecs
+    specs = get_specs(
+        self.get_url_mappings(spec.get('rule_filter')), ignore_verbs,
+        optional_fields, self.sanitizer,
+        openapi_version=openapi_version,
+        doc_dir=self.config.get('doc_dir'))
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\utils.py", line 180, in get_specs
+    doc_summary, doc_description, doc_swag = parse_docstring(
+                                             ~~~~~~~~~~~~~~~^
+        method, sanitizer, endpoint=rule.endpoint, verb=verb)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\utils.py", line 675, in parse_docstring
+    swag = yaml.safe_load(full_doc[yaml_sep + 4:])
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\__init__.py", line 81, in load
+    return loader.get_single_data()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 111, in compose_sequence_node
+    node.value.append(self.compose_node(node, index))
+                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\parser.py", line 98, in check_event
+    self.current_event = self.state()
+                         ~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+       ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\scanner.py", line 116, in check_token
+    self.fetch_more_tokens()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\scanner.py", line 223, in fetch_more_tokens
+    return self.fetch_value()
+           ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\scanner.py", line 577, in fetch_value
+    raise ScannerError(None, None,
+            "mapping values are not allowed here",
+            self.get_mark())
+yaml.scanner.ScannerError: mapping values are not allowed here
+  in "<unicode string>", line 21, column 43:
+     ... description: Canal do pedido (ex: app ou loja)
+                                         ^
+2026-03-13 14:49:28,241 - INFO - 127.0.0.1 - - [13/Mar/2026 14:49:28] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-13 14:49:28,364 - INFO - 127.0.0.1 - - [13/Mar/2026 14:49:28] "[35m[1mGET /apispec_1.json HTTP/1.1[0m" 500 -
+2026-03-13 14:52:34,916 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 14:52:35,149 - INFO -  * Restarting with stat
+2026-03-13 14:52:37,631 - WARNING -  * Debugger is active!
+2026-03-13 14:52:37,649 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 14:54:38,772 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 14:54:39,173 - INFO -  * Restarting with stat
+2026-03-13 14:54:42,078 - WARNING -  * Debugger is active!
+2026-03-13 14:54:42,099 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 14:56:55,413 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 14:56:55,643 - INFO -  * Restarting with stat
+2026-03-13 14:56:58,240 - WARNING -  * Debugger is active!
+2026-03-13 14:56:58,257 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 14:59:37,038 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 14:59:37,566 - INFO -  * Restarting with stat
+2026-03-13 14:59:43,471 - WARNING -  * Debugger is active!
+2026-03-13 14:59:43,491 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:00:58,209 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 15:00:58,511 - INFO -  * Restarting with stat
+2026-03-13 15:01:01,128 - WARNING -  * Debugger is active!
+2026-03-13 15:01:01,148 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:02:43,558 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 15:02:44,378 - INFO -  * Restarting with stat
+2026-03-13 15:02:49,276 - WARNING -  * Debugger is active!
+2026-03-13 15:02:49,298 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:04:14,003 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 15:04:14,233 - INFO -  * Restarting with stat
+2026-03-13 15:04:16,526 - WARNING -  * Debugger is active!
+2026-03-13 15:04:16,542 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:06:44,468 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 15:06:45,302 - INFO -  * Restarting with stat
+2026-03-13 15:06:48,936 - WARNING -  * Debugger is active!
+2026-03-13 15:06:48,958 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:11:06,988 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 15:11:07,304 - INFO -  * Restarting with stat
+2026-03-13 15:11:10,761 - WARNING -  * Debugger is active!
+2026-03-13 15:11:10,782 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:12:07,384 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 15:12:07,625 - INFO -  * Restarting with stat
+2026-03-13 15:12:10,075 - WARNING -  * Debugger is active!
+2026-03-13 15:12:10,095 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:13:43,881 - INFO - 127.0.0.1 - - [13/Mar/2026 15:13:43] "GET /apidocs/ HTTP/1.1" 200 -
+2026-03-13 15:13:44,205 - INFO - 127.0.0.1 - - [13/Mar/2026 15:13:44] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 15:13:44,272 - INFO - 127.0.0.1 - - [13/Mar/2026 15:13:44] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 15:13:44,275 - INFO - 127.0.0.1 - - [13/Mar/2026 15:13:44] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 15:13:44,276 - INFO - 127.0.0.1 - - [13/Mar/2026 15:13:44] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 15:13:44,887 - ERROR - jsonify failure; defaulting to json.dumps
+Traceback (most recent call last):
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\base.py", line 164, in get
+    return jsonify(self.loader())
+                   ~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\base.py", line 438, in get_apispecs
+    specs = get_specs(
+        self.get_url_mappings(spec.get('rule_filter')), ignore_verbs,
+        optional_fields, self.sanitizer,
+        openapi_version=openapi_version,
+        doc_dir=self.config.get('doc_dir'))
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\utils.py", line 180, in get_specs
+    doc_summary, doc_description, doc_swag = parse_docstring(
+                                             ~~~~~~~~~~~~~~~^
+        method, sanitizer, endpoint=rule.endpoint, verb=verb)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\flasgger\utils.py", line 675, in parse_docstring
+    swag = yaml.safe_load(full_doc[yaml_sep + 4:])
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\__init__.py", line 81, in load
+    return loader.get_single_data()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 111, in compose_sequence_node
+    node.value.append(self.compose_node(node, index))
+                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\parser.py", line 98, in check_event
+    self.current_event = self.state()
+                         ~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+       ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\scanner.py", line 116, in check_token
+    self.fetch_more_tokens()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\scanner.py", line 223, in fetch_more_tokens
+    return self.fetch_value()
+           ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Marcelo e Raquel\PycharmProjects\RaizesDoNordeste\.venv\Lib\site-packages\yaml\scanner.py", line 577, in fetch_value
+    raise ScannerError(None, None,
+            "mapping values are not allowed here",
+            self.get_mark())
+yaml.scanner.ScannerError: mapping values are not allowed here
+  in "<unicode string>", line 21, column 43:
+     ... description: Canal do pedido (ex: app ou loja)
+                                         ^
+2026-03-13 15:13:44,892 - INFO - 127.0.0.1 - - [13/Mar/2026 15:13:44] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-13 15:13:45,009 - INFO - 127.0.0.1 - - [13/Mar/2026 15:13:45] "[35m[1mGET /apispec_1.json HTTP/1.1[0m" 500 -
+2026-03-13 15:20:16,978 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 15:20:17,307 - INFO -  * Restarting with stat
+2026-03-13 15:20:19,927 - WARNING -  * Debugger is active!
+2026-03-13 15:20:19,944 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:22:37,541 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 15:22:38,037 - INFO -  * Restarting with stat
+2026-03-13 15:22:42,571 - WARNING -  * Debugger is active!
+2026-03-13 15:22:42,591 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:22:42,838 - INFO - 127.0.0.1 - - [13/Mar/2026 15:22:42] "GET /apidocs/ HTTP/1.1" 200 -
+2026-03-13 15:22:43,165 - INFO - 127.0.0.1 - - [13/Mar/2026 15:22:43] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 15:22:43,167 - INFO - 127.0.0.1 - - [13/Mar/2026 15:22:43] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 15:22:43,214 - INFO - 127.0.0.1 - - [13/Mar/2026 15:22:43] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 15:22:43,216 - INFO - 127.0.0.1 - - [13/Mar/2026 15:22:43] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 15:22:44,264 - INFO - 127.0.0.1 - - [13/Mar/2026 15:22:44] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-13 15:22:44,373 - INFO - 127.0.0.1 - - [13/Mar/2026 15:22:44] "GET /apispec_1.json HTTP/1.1" 200 -
+2026-03-13 15:26:01,476 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 15:26:01,759 - INFO -  * Restarting with stat
+2026-03-13 15:26:07,476 - WARNING -  * Debugger is active!
+2026-03-13 15:26:07,495 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:28:30,990 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 15:28:31,238 - INFO -  * Restarting with stat
+2026-03-13 15:28:33,983 - WARNING -  * Debugger is active!
+2026-03-13 15:28:34,003 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:29:36,987 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 15:29:37,213 - INFO -  * Restarting with stat
+2026-03-13 15:29:39,501 - WARNING -  * Debugger is active!
+2026-03-13 15:29:39,520 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:32:16,844 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 15:32:17,118 - INFO -  * Restarting with stat
+2026-03-13 15:32:21,399 - WARNING -  * Debugger is active!
+2026-03-13 15:32:21,418 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:33:06,994 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 15:33:07,237 - INFO -  * Restarting with stat
+2026-03-13 15:33:09,635 - WARNING -  * Debugger is active!
+2026-03-13 15:33:09,655 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:34:08,250 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 15:34:08,476 - INFO -  * Restarting with stat
+2026-03-13 15:34:17,106 - WARNING -  * Debugger is active!
+2026-03-13 15:34:17,121 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:36:18,226 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 15:36:18,480 - INFO -  * Restarting with stat
+2026-03-13 15:36:22,573 - WARNING -  * Debugger is active!
+2026-03-13 15:36:22,595 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:38:05,416 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 15:38:05,647 - INFO -  * Restarting with stat
+2026-03-13 15:38:09,045 - WARNING -  * Debugger is active!
+2026-03-13 15:38:09,067 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:39:09,160 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 15:39:09,336 - INFO -  * Restarting with stat
+2026-03-13 15:39:11,857 - WARNING -  * Debugger is active!
+2026-03-13 15:39:11,876 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:39:44,425 - INFO - 127.0.0.1 - - [13/Mar/2026 15:39:44] "GET /apidocs/ HTTP/1.1" 200 -
+2026-03-13 15:39:44,739 - INFO - 127.0.0.1 - - [13/Mar/2026 15:39:44] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 15:39:44,809 - INFO - 127.0.0.1 - - [13/Mar/2026 15:39:44] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 15:39:44,810 - INFO - 127.0.0.1 - - [13/Mar/2026 15:39:44] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 15:39:44,874 - INFO - 127.0.0.1 - - [13/Mar/2026 15:39:44] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 15:39:45,455 - INFO - 127.0.0.1 - - [13/Mar/2026 15:39:45] "GET /apispec_1.json HTTP/1.1" 200 -
+2026-03-13 15:39:45,456 - INFO - 127.0.0.1 - - [13/Mar/2026 15:39:45] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-13 15:47:05,392 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 15:47:05,775 - INFO -  * Restarting with stat
+2026-03-13 15:47:10,985 - WARNING -  * Debugger is active!
+2026-03-13 15:47:11,006 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:47:31,022 - INFO - 127.0.0.1 - - [13/Mar/2026 15:47:31] "GET /apidocs/ HTTP/1.1" 200 -
+2026-03-13 15:47:31,335 - INFO - 127.0.0.1 - - [13/Mar/2026 15:47:31] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 15:47:31,403 - INFO - 127.0.0.1 - - [13/Mar/2026 15:47:31] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 15:47:31,415 - INFO - 127.0.0.1 - - [13/Mar/2026 15:47:31] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 15:47:31,501 - INFO - 127.0.0.1 - - [13/Mar/2026 15:47:31] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 15:47:32,099 - INFO - 127.0.0.1 - - [13/Mar/2026 15:47:32] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-13 15:47:32,123 - INFO - 127.0.0.1 - - [13/Mar/2026 15:47:32] "GET /apispec_1.json HTTP/1.1" 200 -
+2026-03-13 15:54:42,822 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 15:54:43,024 - INFO -  * Restarting with stat
+2026-03-13 15:54:45,567 - WARNING -  * Debugger is active!
+2026-03-13 15:54:45,584 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 15:55:30,664 - INFO - 127.0.0.1 - - [13/Mar/2026 15:55:30] "GET /apidocs/ HTTP/1.1" 200 -
+2026-03-13 15:55:30,929 - INFO - 127.0.0.1 - - [13/Mar/2026 15:55:30] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 15:55:31,043 - INFO - 127.0.0.1 - - [13/Mar/2026 15:55:31] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 15:55:31,063 - INFO - 127.0.0.1 - - [13/Mar/2026 15:55:31] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 15:55:31,065 - INFO - 127.0.0.1 - - [13/Mar/2026 15:55:31] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 15:55:31,723 - INFO - 127.0.0.1 - - [13/Mar/2026 15:55:31] "GET /apispec_1.json HTTP/1.1" 200 -
+2026-03-13 15:55:31,723 - INFO - 127.0.0.1 - - [13/Mar/2026 15:55:31] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-13 16:07:07,456 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\run.py', reloading
+2026-03-13 16:07:07,862 - INFO -  * Restarting with stat
+2026-03-13 16:07:11,838 - WARNING -  * Debugger is active!
+2026-03-13 16:07:11,858 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 16:07:12,026 - INFO - 127.0.0.1 - - [13/Mar/2026 16:07:12] "[33mGET /apidocs/ HTTP/1.1[0m" 404 -
+2026-03-13 16:08:15,150 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\run.py', reloading
+2026-03-13 16:08:15,342 - INFO -  * Restarting with stat
+2026-03-13 16:08:17,313 - WARNING -  * Debugger is active!
+2026-03-13 16:08:17,327 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 16:08:17,500 - INFO - 127.0.0.1 - - [13/Mar/2026 16:08:17] "GET /apidocs/ HTTP/1.1" 200 -
+2026-03-13 16:08:17,828 - INFO - 127.0.0.1 - - [13/Mar/2026 16:08:17] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 16:08:17,832 - INFO - 127.0.0.1 - - [13/Mar/2026 16:08:17] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 16:08:17,881 - INFO - 127.0.0.1 - - [13/Mar/2026 16:08:17] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 16:08:17,897 - INFO - 127.0.0.1 - - [13/Mar/2026 16:08:17] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 16:08:18,615 - INFO - 127.0.0.1 - - [13/Mar/2026 16:08:18] "GET /apispec_1.json HTTP/1.1" 200 -
+2026-03-13 16:08:18,616 - INFO - 127.0.0.1 - - [13/Mar/2026 16:08:18] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-13 16:31:37,624 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\run.py', reloading
+2026-03-13 16:31:37,829 - INFO -  * Restarting with stat
+2026-03-13 16:31:41,508 - WARNING -  * Debugger is active!
+2026-03-13 16:31:41,527 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 16:31:41,959 - INFO - 127.0.0.1 - - [13/Mar/2026 16:31:41] "[33mGET /apidocs/ HTTP/1.1[0m" 404 -
+2026-03-13 16:31:50,068 - INFO - 127.0.0.1 - - [13/Mar/2026 16:31:50] "[32mGET /docs HTTP/1.1[0m" 308 -
+2026-03-13 16:31:50,135 - INFO - 127.0.0.1 - - [13/Mar/2026 16:31:50] "GET /docs/ HTTP/1.1" 200 -
+2026-03-13 16:31:50,928 - INFO - 127.0.0.1 - - [13/Mar/2026 16:31:50] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 16:31:50,990 - INFO - 127.0.0.1 - - [13/Mar/2026 16:31:50] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 16:31:51,019 - INFO - 127.0.0.1 - - [13/Mar/2026 16:31:51] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 16:31:51,034 - INFO - 127.0.0.1 - - [13/Mar/2026 16:31:51] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 16:31:51,297 - INFO - 127.0.0.1 - - [13/Mar/2026 16:31:51] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-13 16:31:51,483 - INFO - 127.0.0.1 - - [13/Mar/2026 16:31:51] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-13 16:39:24,550 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\run.py', reloading
+2026-03-13 16:39:24,694 - INFO -  * Restarting with stat
+2026-03-13 16:39:26,751 - WARNING -  * Debugger is active!
+2026-03-13 16:39:26,779 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 16:39:58,979 - INFO - 127.0.0.1 - - [13/Mar/2026 16:39:58] "GET /docs/ HTTP/1.1" 200 -
+2026-03-13 16:39:59,251 - INFO - 127.0.0.1 - - [13/Mar/2026 16:39:59] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 16:39:59,357 - INFO - 127.0.0.1 - - [13/Mar/2026 16:39:59] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 16:39:59,358 - INFO - 127.0.0.1 - - [13/Mar/2026 16:39:59] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 16:39:59,376 - INFO - 127.0.0.1 - - [13/Mar/2026 16:39:59] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 16:39:59,967 - INFO - 127.0.0.1 - - [13/Mar/2026 16:39:59] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-13 16:39:59,968 - INFO - 127.0.0.1 - - [13/Mar/2026 16:39:59] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-13 17:11:15,529 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\run.py', reloading
+2026-03-13 17:11:15,881 - INFO -  * Restarting with stat
+2026-03-13 17:11:18,267 - WARNING -  * Debugger is active!
+2026-03-13 17:11:18,282 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 17:11:30,771 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\run.py', reloading
+2026-03-13 17:11:31,055 - INFO -  * Restarting with stat
+2026-03-13 17:11:33,885 - WARNING -  * Debugger is active!
+2026-03-13 17:11:33,906 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 17:11:47,782 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\run.py', reloading
+2026-03-13 17:11:48,039 - INFO -  * Restarting with stat
+2026-03-13 17:12:38,979 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-13 17:12:38,980 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-13 17:12:38,982 - INFO -  * Restarting with stat
+2026-03-13 17:12:40,755 - WARNING -  * Debugger is active!
+2026-03-13 17:12:40,770 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 17:12:40,942 - INFO - 127.0.0.1 - - [13/Mar/2026 17:12:40] "GET /docs/ HTTP/1.1" 200 -
+2026-03-13 17:12:41,265 - INFO - 127.0.0.1 - - [13/Mar/2026 17:12:41] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 17:12:41,268 - INFO - 127.0.0.1 - - [13/Mar/2026 17:12:41] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 17:12:41,415 - INFO - 127.0.0.1 - - [13/Mar/2026 17:12:41] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 17:12:41,605 - INFO - 127.0.0.1 - - [13/Mar/2026 17:12:41] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 17:12:42,197 - INFO - 127.0.0.1 - - [13/Mar/2026 17:12:42] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-13 17:12:42,197 - INFO - 127.0.0.1 - - [13/Mar/2026 17:12:42] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-13 17:12:49,216 - INFO - 127.0.0.1 - - [13/Mar/2026 17:12:49] "GET /docs/ HTTP/1.1" 200 -
+2026-03-13 17:12:49,528 - INFO - 127.0.0.1 - - [13/Mar/2026 17:12:49] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 17:12:49,599 - INFO - 127.0.0.1 - - [13/Mar/2026 17:12:49] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 17:12:49,607 - INFO - 127.0.0.1 - - [13/Mar/2026 17:12:49] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 17:12:49,609 - INFO - 127.0.0.1 - - [13/Mar/2026 17:12:49] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 17:12:50,183 - INFO - 127.0.0.1 - - [13/Mar/2026 17:12:50] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-13 17:12:50,184 - INFO - 127.0.0.1 - - [13/Mar/2026 17:12:50] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-13 17:16:18,861 - INFO - 127.0.0.1 - - [13/Mar/2026 17:16:18] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-03-13 17:16:56,337 - INFO - 127.0.0.1 - - [13/Mar/2026 17:16:56] "[33mPOST /login HTTP/1.1[0m" 404 -
+2026-03-13 17:17:17,801 - INFO - 127.0.0.1 - - [13/Mar/2026 17:17:17] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-03-13 17:19:50,655 - INFO - 127.0.0.1 - - [13/Mar/2026 17:19:50] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-03-13 17:20:46,089 - INFO - Login realizado: cliente@teste.com
+2026-03-13 17:20:46,090 - INFO - 127.0.0.1 - - [13/Mar/2026 17:20:46] "POST /login HTTP/1.1" 200 -
+2026-03-13 17:29:55,189 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 17:29:55,477 - INFO -  * Restarting with stat
+2026-03-13 17:29:58,181 - WARNING -  * Debugger is active!
+2026-03-13 17:29:58,201 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 17:30:53,118 - INFO - 127.0.0.1 - - [13/Mar/2026 17:30:53] "GET /docs/ HTTP/1.1" 200 -
+2026-03-13 17:30:53,406 - INFO - 127.0.0.1 - - [13/Mar/2026 17:30:53] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 17:30:53,500 - INFO - 127.0.0.1 - - [13/Mar/2026 17:30:53] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 17:30:53,502 - INFO - 127.0.0.1 - - [13/Mar/2026 17:30:53] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 17:30:53,523 - INFO - 127.0.0.1 - - [13/Mar/2026 17:30:53] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 17:30:54,205 - INFO - 127.0.0.1 - - [13/Mar/2026 17:30:54] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-13 17:30:54,230 - INFO - 127.0.0.1 - - [13/Mar/2026 17:30:54] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-13 17:35:20,614 - INFO - 127.0.0.1 - - [13/Mar/2026 17:35:20] "[31m[1mPOST /unidades HTTP/1.1[0m" 401 -
+2026-03-13 17:35:58,626 - INFO - 127.0.0.1 - - [13/Mar/2026 17:35:58] "[31m[1mGET /meus-pontos HTTP/1.1[0m" 401 -
+2026-03-13 17:37:00,814 - INFO - 127.0.0.1 - - [13/Mar/2026 17:37:00] "GET /users HTTP/1.1" 200 -
+2026-03-13 17:38:11,466 - INFO - 127.0.0.1 - - [13/Mar/2026 17:38:11] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-03-13 17:39:04,790 - INFO - 127.0.0.1 - - [13/Mar/2026 17:39:04] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-03-13 17:40:18,141 - INFO - 127.0.0.1 - - [13/Mar/2026 17:40:18] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+2026-03-13 17:40:37,303 - INFO - 127.0.0.1 - - [13/Mar/2026 17:40:37] "GET /docs/ HTTP/1.1" 200 -
+2026-03-13 17:40:37,610 - INFO - 127.0.0.1 - - [13/Mar/2026 17:40:37] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 17:40:37,696 - INFO - 127.0.0.1 - - [13/Mar/2026 17:40:37] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 17:40:37,697 - INFO - 127.0.0.1 - - [13/Mar/2026 17:40:37] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 17:40:37,697 - INFO - 127.0.0.1 - - [13/Mar/2026 17:40:37] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 17:40:38,329 - INFO - 127.0.0.1 - - [13/Mar/2026 17:40:38] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-13 17:40:38,330 - INFO - 127.0.0.1 - - [13/Mar/2026 17:40:38] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-13 17:41:03,111 - INFO - 127.0.0.1 - - [13/Mar/2026 17:41:03] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+2026-03-13 17:45:55,579 - INFO - Novo usuário criado: marcelo@email.com
+2026-03-13 17:45:55,585 - INFO - 127.0.0.1 - - [13/Mar/2026 17:45:55] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+2026-03-13 17:46:37,826 - INFO - Login realizado: marcelo@email.com
+2026-03-13 17:46:37,827 - INFO - 127.0.0.1 - - [13/Mar/2026 17:46:37] "POST /login HTTP/1.1" 200 -
+2026-03-13 17:48:07,144 - INFO - 127.0.0.1 - - [13/Mar/2026 17:48:07] "GET /users HTTP/1.1" 200 -
+2026-03-13 17:53:02,308 - INFO - 127.0.0.1 - - [13/Mar/2026 17:53:02] "[31m[1mGET /unidades/1/pedidos HTTP/1.1[0m" 401 -
+2026-03-13 17:53:15,523 - INFO - 127.0.0.1 - - [13/Mar/2026 17:53:15] "[31m[1mGET /unidades/2/pedidos HTTP/1.1[0m" 401 -
+2026-03-13 17:54:15,559 - INFO - 127.0.0.1 - - [13/Mar/2026 17:54:15] "[31m[1mGET /pedidos HTTP/1.1[0m" 401 -
+2026-03-13 17:54:38,803 - INFO - 127.0.0.1 - - [13/Mar/2026 17:54:38] "[31m[1mGET /pedidos?canalPedido=app HTTP/1.1[0m" 401 -
+2026-03-13 17:55:38,109 - INFO - 127.0.0.1 - - [13/Mar/2026 17:55:38] "GET /unidades/1/produtos HTTP/1.1" 200 -
+2026-03-13 17:56:21,494 - INFO - 127.0.0.1 - - [13/Mar/2026 17:56:21] "GET /unidades/2/produtos HTTP/1.1" 200 -
+2026-03-13 17:56:46,177 - INFO - 127.0.0.1 - - [13/Mar/2026 17:56:46] "GET /unidades/3/produtos HTTP/1.1" 200 -
+2026-03-13 17:57:04,357 - INFO - 127.0.0.1 - - [13/Mar/2026 17:57:04] "GET /unidades/4/produtos HTTP/1.1" 200 -
+2026-03-13 17:58:31,397 - INFO - 127.0.0.1 - - [13/Mar/2026 17:58:31] "GET /unidades/1/produtos HTTP/1.1" 200 -
+2026-03-13 18:02:12,089 - INFO - 127.0.0.1 - - [13/Mar/2026 18:02:12] "GET /docs/ HTTP/1.1" 200 -
+2026-03-13 18:02:12,147 - INFO - 127.0.0.1 - - [13/Mar/2026 18:02:12] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-13 18:02:12,357 - INFO - 127.0.0.1 - - [13/Mar/2026 18:02:12] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-13 18:02:12,466 - INFO - 127.0.0.1 - - [13/Mar/2026 18:02:12] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-13 18:02:12,466 - INFO - 127.0.0.1 - - [13/Mar/2026 18:02:12] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-13 18:02:13,034 - INFO - 127.0.0.1 - - [13/Mar/2026 18:02:13] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-13 18:38:03,183 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 18:38:04,515 - INFO -  * Restarting with stat
+2026-03-13 18:38:08,544 - WARNING -  * Debugger is active!
+2026-03-13 18:38:08,563 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 18:39:10,798 - INFO - 127.0.0.1 - - [13/Mar/2026 18:39:10] "GET /unidades/1/produtos HTTP/1.1" 200 -
+2026-03-13 18:39:36,638 - INFO - 127.0.0.1 - - [13/Mar/2026 18:39:36] "[33mGET /unidades/99/produtos HTTP/1.1[0m" 404 -
+2026-03-13 18:42:34,261 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 18:42:34,607 - INFO -  * Restarting with stat
+2026-03-13 18:42:39,108 - WARNING -  * Debugger is active!
+2026-03-13 18:42:39,123 - INFO -  * Debugger PIN: 268-760-856
+2026-03-13 18:45:43,057 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-13 18:45:43,307 - INFO -  * Restarting with stat
+2026-03-13 18:45:45,352 - WARNING -  * Debugger is active!
+2026-03-13 18:45:45,367 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 15:40:35,680 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-16 15:40:35,681 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-16 15:40:35,691 - INFO -  * Restarting with stat
+2026-03-16 15:40:37,749 - WARNING -  * Debugger is active!
+2026-03-16 15:40:37,767 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 15:40:54,829 - INFO - 127.0.0.1 - - [16/Mar/2026 15:40:54] "GET / HTTP/1.1" 200 -
+2026-03-16 15:40:55,248 - INFO - 127.0.0.1 - - [16/Mar/2026 15:40:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-16 15:41:11,079 - INFO - 127.0.0.1 - - [16/Mar/2026 15:41:11] "[32mGET /docs HTTP/1.1[0m" 308 -
+2026-03-16 15:41:11,143 - INFO - 127.0.0.1 - - [16/Mar/2026 15:41:11] "GET /docs/ HTTP/1.1" 200 -
+2026-03-16 15:41:11,677 - INFO - 127.0.0.1 - - [16/Mar/2026 15:41:11] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 200 -
+2026-03-16 15:41:11,694 - INFO - 127.0.0.1 - - [16/Mar/2026 15:41:11] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2026-03-16 15:41:11,715 - INFO - 127.0.0.1 - - [16/Mar/2026 15:41:11] "GET /flasgger_static/lib/jquery.min.js HTTP/1.1" 200 -
+2026-03-16 15:41:11,716 - INFO - 127.0.0.1 - - [16/Mar/2026 15:41:11] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+2026-03-16 15:41:12,310 - INFO - 127.0.0.1 - - [16/Mar/2026 15:41:12] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -
+2026-03-16 15:41:12,377 - INFO - 127.0.0.1 - - [16/Mar/2026 15:41:12] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-16 18:10:44,010 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-16 18:10:44,010 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-16 18:10:44,013 - INFO -  * Restarting with stat
+2026-03-16 18:10:45,780 - WARNING -  * Debugger is active!
+2026-03-16 18:10:45,795 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 18:10:53,008 - INFO - 127.0.0.1 - - [16/Mar/2026 18:10:53] "GET / HTTP/1.1" 200 -
+2026-03-16 18:10:59,030 - INFO - 127.0.0.1 - - [16/Mar/2026 18:10:59] "GET /docs/ HTTP/1.1" 200 -
+2026-03-16 18:10:59,541 - INFO - 127.0.0.1 - - [16/Mar/2026 18:10:59] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-16 18:10:59,554 - INFO - 127.0.0.1 - - [16/Mar/2026 18:10:59] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-16 18:10:59,556 - INFO - 127.0.0.1 - - [16/Mar/2026 18:10:59] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-16 18:10:59,584 - INFO - 127.0.0.1 - - [16/Mar/2026 18:10:59] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-16 18:11:00,210 - INFO - 127.0.0.1 - - [16/Mar/2026 18:11:00] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-16 18:11:37,813 - INFO - 127.0.0.1 - - [16/Mar/2026 18:11:37] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-03-16 18:38:43,009 - INFO - Login realizado: joao@email.com
+2026-03-16 18:38:43,010 - INFO - 127.0.0.1 - - [16/Mar/2026 18:38:43] "POST /login HTTP/1.1" 200 -
+2026-03-16 18:39:32,375 - INFO - 127.0.0.1 - - [16/Mar/2026 18:39:32] "[31m[1mGET /meus-pontos HTTP/1.1[0m" 401 -
+2026-03-16 18:40:14,054 - INFO - 127.0.0.1 - - [16/Mar/2026 18:40:14] "GET /unidades/1/produtos HTTP/1.1" 200 -
+2026-03-16 18:41:08,264 - INFO - 127.0.0.1 - - [16/Mar/2026 18:41:08] "[31m[1mGET /meus-pedidos HTTP/1.1[0m" 401 -
+2026-03-16 18:44:35,456 - INFO - 127.0.0.1 - - [16/Mar/2026 18:44:35] "[31m[1mPOST /pedidos HTTP/1.1[0m" 401 -
+2026-03-16 18:44:58,095 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\run.py', reloading
+2026-03-16 18:44:58,756 - INFO -  * Restarting with stat
+2026-03-16 18:45:06,362 - WARNING -  * Debugger is active!
+2026-03-16 18:45:06,377 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 18:46:46,607 - INFO - 127.0.0.1 - - [16/Mar/2026 18:46:46] "[31m[1mPOST /ativar-fidelidade HTTP/1.1[0m" 401 -
+2026-03-16 18:49:52,650 - INFO - 127.0.0.1 - - [16/Mar/2026 18:49:52] "[31m[1mPOST /pedidos/1/pagamento HTTP/1.1[0m" 401 -
+2026-03-16 18:52:40,597 - INFO - 127.0.0.1 - - [16/Mar/2026 18:52:40] "[31m[1mPOST /register HTTP/1.1[0m" 409 -
+2026-03-16 18:53:04,855 - INFO - 127.0.0.1 - - [16/Mar/2026 18:53:04] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+2026-03-16 18:53:37,422 - INFO - Novo usuário criado: isaque@email.com
+2026-03-16 18:53:37,430 - INFO - 127.0.0.1 - - [16/Mar/2026 18:53:37] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+2026-03-16 18:54:05,960 - INFO - Login realizado: isaque@email.com
+2026-03-16 18:54:05,960 - INFO - 127.0.0.1 - - [16/Mar/2026 18:54:05] "POST /login HTTP/1.1" 200 -
+2026-03-16 18:58:47,654 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-16 18:58:48,276 - INFO -  * Restarting with stat
+2026-03-16 18:58:52,589 - WARNING -  * Debugger is active!
+2026-03-16 18:58:52,605 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 18:58:54,483 - INFO - 127.0.0.1 - - [16/Mar/2026 18:58:54] "GET /docs/ HTTP/1.1" 200 -
+2026-03-16 18:58:55,972 - INFO - 127.0.0.1 - - [16/Mar/2026 18:58:55] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-16 18:58:55,995 - INFO - 127.0.0.1 - - [16/Mar/2026 18:58:55] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-16 18:58:56,004 - INFO - 127.0.0.1 - - [16/Mar/2026 18:58:56] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-16 18:58:56,012 - INFO - 127.0.0.1 - - [16/Mar/2026 18:58:56] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-16 18:58:56,614 - INFO - 127.0.0.1 - - [16/Mar/2026 18:58:56] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-16 18:58:56,614 - INFO - 127.0.0.1 - - [16/Mar/2026 18:58:56] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-16 18:59:28,305 - INFO - Login realizado: isaque@email.com
+2026-03-16 18:59:28,307 - INFO - 127.0.0.1 - - [16/Mar/2026 18:59:28] "POST /login HTTP/1.1" 200 -
+2026-03-16 19:00:23,349 - INFO - 127.0.0.1 - - [16/Mar/2026 19:00:23] "[31m[1mPOST /unidades HTTP/1.1[0m" 401 -
+2026-03-16 19:00:42,958 - INFO - 127.0.0.1 - - [16/Mar/2026 19:00:42] "[31m[1mPOST /unidades HTTP/1.1[0m" 401 -
+2026-03-16 19:03:15,013 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-16 19:03:15,186 - INFO -  * Restarting with stat
+2026-03-16 19:03:31,030 - WARNING -  * Debugger is active!
+2026-03-16 19:03:31,060 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 19:03:34,470 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-16 19:03:34,755 - INFO -  * Restarting with stat
+2026-03-16 19:03:39,792 - WARNING -  * Debugger is active!
+2026-03-16 19:03:39,813 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 19:04:00,658 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-16 19:04:00,848 - INFO -  * Restarting with stat
+2026-03-16 19:04:03,052 - WARNING -  * Debugger is active!
+2026-03-16 19:04:03,067 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 19:06:14,712 - INFO - 127.0.0.1 - - [16/Mar/2026 19:06:14] "[31m[1mPOST /unidades HTTP/1.1[0m" 401 -
+2026-03-16 19:06:25,608 - INFO - 127.0.0.1 - - [16/Mar/2026 19:06:25] "GET /docs/ HTTP/1.1" 200 -
+2026-03-16 19:06:26,100 - INFO - 127.0.0.1 - - [16/Mar/2026 19:06:26] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-16 19:06:26,161 - INFO - 127.0.0.1 - - [16/Mar/2026 19:06:26] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-16 19:06:26,179 - INFO - 127.0.0.1 - - [16/Mar/2026 19:06:26] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-16 19:06:26,195 - INFO - 127.0.0.1 - - [16/Mar/2026 19:06:26] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-16 19:06:26,639 - INFO - 127.0.0.1 - - [16/Mar/2026 19:06:26] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-16 19:06:26,666 - INFO - 127.0.0.1 - - [16/Mar/2026 19:06:26] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-16 19:06:59,881 - INFO - Login realizado: isaque@email.com
+2026-03-16 19:06:59,882 - INFO - 127.0.0.1 - - [16/Mar/2026 19:06:59] "POST /login HTTP/1.1" 200 -
+2026-03-16 19:07:56,628 - INFO - 127.0.0.1 - - [16/Mar/2026 19:07:56] "[31m[1mPOST /unidades HTTP/1.1[0m" 401 -
+2026-03-16 19:18:49,260 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-16 19:18:49,260 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-16 19:18:49,263 - INFO -  * Restarting with stat
+2026-03-16 19:18:50,985 - WARNING -  * Debugger is active!
+2026-03-16 19:18:51,000 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 19:19:02,102 - INFO - 127.0.0.1 - - [16/Mar/2026 19:19:02] "GET /docs/ HTTP/1.1" 200 -
+2026-03-16 19:19:02,604 - INFO - 127.0.0.1 - - [16/Mar/2026 19:19:02] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-16 19:19:02,629 - INFO - 127.0.0.1 - - [16/Mar/2026 19:19:02] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-16 19:19:02,636 - INFO - 127.0.0.1 - - [16/Mar/2026 19:19:02] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-16 19:19:02,651 - INFO - 127.0.0.1 - - [16/Mar/2026 19:19:02] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-16 19:19:03,142 - INFO - 127.0.0.1 - - [16/Mar/2026 19:19:03] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-16 19:19:03,181 - INFO - 127.0.0.1 - - [16/Mar/2026 19:19:03] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-16 19:19:27,432 - INFO - Login realizado: isaque@email.com
+2026-03-16 19:19:27,432 - INFO - 127.0.0.1 - - [16/Mar/2026 19:19:27] "POST /login HTTP/1.1" 200 -
+2026-03-16 19:20:21,494 - INFO - 127.0.0.1 - - [16/Mar/2026 19:20:21] "[31m[1mPOST /unidades HTTP/1.1[0m" 401 -
+2026-03-16 19:22:11,555 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\run.py', reloading
+2026-03-16 19:22:11,767 - INFO -  * Restarting with stat
+2026-03-16 19:22:14,227 - WARNING -  * Debugger is active!
+2026-03-16 19:22:14,243 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 20:29:34,326 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-16 20:29:34,572 - INFO -  * Restarting with stat
+2026-03-16 20:29:37,276 - WARNING -  * Debugger is active!
+2026-03-16 20:29:37,291 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 20:30:22,558 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-16 20:30:22,835 - INFO -  * Restarting with stat
+2026-03-16 20:30:25,364 - WARNING -  * Debugger is active!
+2026-03-16 20:30:25,378 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 20:36:01,969 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-16 20:36:02,272 - INFO -  * Restarting with stat
+2026-03-16 20:36:04,986 - WARNING -  * Debugger is active!
+2026-03-16 20:36:05,012 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 20:43:23,496 - INFO - Novo usuário criado: teste@teste.com
+2026-03-16 20:43:23,502 - INFO - 127.0.0.1 - - [16/Mar/2026 20:43:23] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+2026-03-16 20:45:27,933 - INFO - Login realizado: teste@teste.com
+2026-03-16 20:45:27,934 - INFO - 127.0.0.1 - - [16/Mar/2026 20:45:27] "POST /login HTTP/1.1" 200 -
+2026-03-16 20:46:30,072 - INFO - 127.0.0.1 - - [16/Mar/2026 20:46:30] "[31m[1mPOST /unidades HTTP/1.1[0m" 401 -
+2026-03-16 20:48:08,469 - INFO - Login realizado: teste@teste.com
+2026-03-16 20:48:08,469 - INFO - 127.0.0.1 - - [16/Mar/2026 20:48:08] "POST /login HTTP/1.1" 200 -
+2026-03-16 20:49:09,986 - INFO - 127.0.0.1 - - [16/Mar/2026 20:49:09] "[35m[1mPOST /unidades HTTP/1.1[0m" 201 -
+2026-03-16 20:51:57,195 - INFO - 127.0.0.1 - - [16/Mar/2026 20:51:57] "[31m[1mPOST /produtos HTTP/1.1[0m" 401 -
+2026-03-16 20:52:11,430 - INFO - 127.0.0.1 - - [16/Mar/2026 20:52:11] "[31m[1mPOST /produtos HTTP/1.1[0m" 401 -
+2026-03-16 20:52:25,877 - INFO - 127.0.0.1 - - [16/Mar/2026 20:52:25] "[31m[1mPOST /produtos HTTP/1.1[0m" 401 -
+2026-03-16 20:52:43,282 - INFO - 127.0.0.1 - - [16/Mar/2026 20:52:43] "[31m[1mPOST /produtos HTTP/1.1[0m" 401 -
+2026-03-16 20:54:39,942 - INFO - 127.0.0.1 - - [16/Mar/2026 20:54:39] "[31m[1mGET /unidades/1/pedidos HTTP/1.1[0m" 401 -
+2026-03-16 20:56:27,027 - INFO - 127.0.0.1 - - [16/Mar/2026 20:56:27] "[31m[1mPOST /produtos HTTP/1.1[0m" 401 -
+2026-03-16 21:04:16,234 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-16 21:04:16,234 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-16 21:04:16,236 - INFO -  * Restarting with stat
+2026-03-16 21:04:17,898 - WARNING -  * Debugger is active!
+2026-03-16 21:04:17,912 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 21:04:38,717 - INFO - 127.0.0.1 - - [16/Mar/2026 21:04:38] "GET /docs/ HTTP/1.1" 200 -
+2026-03-16 21:04:39,197 - INFO - 127.0.0.1 - - [16/Mar/2026 21:04:39] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-16 21:04:39,259 - INFO - 127.0.0.1 - - [16/Mar/2026 21:04:39] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-16 21:04:39,271 - INFO - 127.0.0.1 - - [16/Mar/2026 21:04:39] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-16 21:04:39,275 - INFO - 127.0.0.1 - - [16/Mar/2026 21:04:39] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-16 21:04:39,835 - INFO - 127.0.0.1 - - [16/Mar/2026 21:04:39] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-16 21:04:39,835 - INFO - 127.0.0.1 - - [16/Mar/2026 21:04:39] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-16 21:05:19,909 - INFO - 127.0.0.1 - - [16/Mar/2026 21:05:19] "[31m[1mPOST /register HTTP/1.1[0m" 409 -
+2026-03-16 21:05:55,644 - INFO - Login realizado: isaque@email.com
+2026-03-16 21:05:55,644 - INFO - 127.0.0.1 - - [16/Mar/2026 21:05:55] "POST /login HTTP/1.1" 200 -
+2026-03-16 21:07:01,162 - INFO - 127.0.0.1 - - [16/Mar/2026 21:07:01] "GET /unidades/1/produtos HTTP/1.1" 200 -
+2026-03-16 21:07:42,915 - INFO - 127.0.0.1 - - [16/Mar/2026 21:07:42] "GET /unidades/2/produtos HTTP/1.1" 200 -
+2026-03-16 21:08:13,003 - INFO - 127.0.0.1 - - [16/Mar/2026 21:08:13] "GET /unidades/3/produtos HTTP/1.1" 200 -
+2026-03-16 21:08:33,428 - INFO - 127.0.0.1 - - [16/Mar/2026 21:08:33] "GET /unidades/4/produtos HTTP/1.1" 200 -
+2026-03-16 21:08:46,470 - INFO - 127.0.0.1 - - [16/Mar/2026 21:08:46] "[33mGET /unidades/5/produtos HTTP/1.1[0m" 404 -
+2026-03-16 21:09:30,602 - INFO - 127.0.0.1 - - [16/Mar/2026 21:09:30] "[31m[1mPOST /produtos HTTP/1.1[0m" 401 -
+2026-03-16 21:09:57,539 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-16 21:09:57,540 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-16 21:09:57,542 - INFO -  * Restarting with stat
+2026-03-16 21:09:59,275 - WARNING -  * Debugger is active!
+2026-03-16 21:09:59,289 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 21:10:47,251 - INFO - Login realizado: isaque@email.com
+2026-03-16 21:10:47,252 - INFO - 127.0.0.1 - - [16/Mar/2026 21:10:47] "POST /login HTTP/1.1" 200 -
+2026-03-16 21:11:49,189 - INFO - 127.0.0.1 - - [16/Mar/2026 21:11:49] "[31m[1mPOST /produtos HTTP/1.1[0m" 401 -
+2026-03-16 21:12:31,520 - INFO - 127.0.0.1 - - [16/Mar/2026 21:12:31] "[31m[1mPOST /produtos HTTP/1.1[0m" 401 -
+2026-03-16 21:13:34,696 - INFO - 127.0.0.1 - - [16/Mar/2026 21:13:34] "[31m[1mPOST /produtos HTTP/1.1[0m" 401 -
+2026-03-16 21:22:44,074 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-16 21:22:44,303 - INFO -  * Restarting with stat
+2026-03-16 21:22:46,525 - WARNING -  * Debugger is active!
+2026-03-16 21:22:46,540 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 21:29:42,108 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-16 21:29:42,108 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-16 21:29:42,111 - INFO -  * Restarting with stat
+2026-03-16 21:29:44,174 - WARNING -  * Debugger is active!
+2026-03-16 21:29:44,190 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 21:29:52,400 - INFO - 127.0.0.1 - - [16/Mar/2026 21:29:52] "GET /docs/ HTTP/1.1" 200 -
+2026-03-16 21:29:52,950 - INFO - 127.0.0.1 - - [16/Mar/2026 21:29:52] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-16 21:29:52,971 - INFO - 127.0.0.1 - - [16/Mar/2026 21:29:52] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-16 21:29:52,999 - INFO - 127.0.0.1 - - [16/Mar/2026 21:29:52] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-16 21:29:53,003 - INFO - 127.0.0.1 - - [16/Mar/2026 21:29:53] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-16 21:29:53,525 - INFO - 127.0.0.1 - - [16/Mar/2026 21:29:53] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-16 21:30:14,734 - INFO - 127.0.0.1 - - [16/Mar/2026 21:30:14] "GET /users HTTP/1.1" 200 -
+2026-03-16 21:31:00,937 - INFO - 127.0.0.1 - - [16/Mar/2026 21:31:00] "[31m[1mGET /unidades/1/pedidos HTTP/1.1[0m" 401 -
+2026-03-16 21:31:36,336 - INFO - Login realizado: joao@email.com
+2026-03-16 21:31:36,336 - INFO - 127.0.0.1 - - [16/Mar/2026 21:31:36] "POST /login HTTP/1.1" 200 -
+2026-03-16 21:32:26,696 - INFO - 127.0.0.1 - - [16/Mar/2026 21:32:26] "GET /unidades/1/produtos HTTP/1.1" 200 -
+2026-03-16 21:32:42,405 - INFO - 127.0.0.1 - - [16/Mar/2026 21:32:42] "[31m[1mGET /meus-pedidos HTTP/1.1[0m" 401 -
+2026-03-16 21:33:25,985 - INFO - Login realizado: joao@email.com
+2026-03-16 21:33:25,986 - INFO - 127.0.0.1 - - [16/Mar/2026 21:33:25] "POST /login HTTP/1.1" 200 -
+2026-03-16 21:34:00,935 - INFO - 127.0.0.1 - - [16/Mar/2026 21:34:00] "[31m[1mGET /meus-pedidos HTTP/1.1[0m" 401 -
+2026-03-16 21:34:08,328 - INFO - 127.0.0.1 - - [16/Mar/2026 21:34:08] "[31m[1mGET /meus-pedidos HTTP/1.1[0m" 401 -
+2026-03-16 21:34:26,841 - INFO - 127.0.0.1 - - [16/Mar/2026 21:34:26] "GET /users HTTP/1.1" 200 -
+2026-03-16 21:35:27,548 - INFO - 127.0.0.1 - - [16/Mar/2026 21:35:27] "[31m[1mGET /meus-pedidos HTTP/1.1[0m" 401 -
+2026-03-16 21:36:31,660 - INFO - 127.0.0.1 - - [16/Mar/2026 21:36:31] "[31m[1mPOST /produtos HTTP/1.1[0m" 401 -
+2026-03-16 21:36:54,773 - INFO - 127.0.0.1 - - [16/Mar/2026 21:36:54] "[31m[1mPOST /resgatar-pontos HTTP/1.1[0m" 401 -
+2026-03-16 21:37:08,861 - INFO - 127.0.0.1 - - [16/Mar/2026 21:37:08] "[31m[1mPOST /ativar-fidelidade HTTP/1.1[0m" 401 -
+2026-03-16 21:37:36,306 - INFO - 127.0.0.1 - - [16/Mar/2026 21:37:36] "[31m[1mPUT /estoque/2 HTTP/1.1[0m" 401 -
+2026-03-16 21:38:26,376 - INFO - Login realizado: joao@email.com
+2026-03-16 21:38:26,376 - INFO - 127.0.0.1 - - [16/Mar/2026 21:38:26] "POST /login HTTP/1.1" 200 -
+2026-03-16 21:39:46,516 - INFO - 127.0.0.1 - - [16/Mar/2026 21:39:46] "[31m[1mGET /pedidos?canalPedido=app HTTP/1.1[0m" 401 -
+2026-03-16 21:40:05,354 - INFO - 127.0.0.1 - - [16/Mar/2026 21:40:05] "[31m[1mGET /meus-pedidos HTTP/1.1[0m" 401 -
+2026-03-16 21:41:01,447 - INFO - 127.0.0.1 - - [16/Mar/2026 21:41:01] "[31m[1mGET /unidades/5/pedidos HTTP/1.1[0m" 401 -
+2026-03-16 21:41:08,326 - INFO - 127.0.0.1 - - [16/Mar/2026 21:41:08] "[31m[1mGET /unidades/4/pedidos HTTP/1.1[0m" 401 -
+2026-03-16 21:41:14,276 - INFO - 127.0.0.1 - - [16/Mar/2026 21:41:14] "[31m[1mGET /unidades/1/pedidos HTTP/1.1[0m" 401 -
+2026-03-16 21:41:52,781 - INFO - 127.0.0.1 - - [16/Mar/2026 21:41:52] "GET /users HTTP/1.1" 200 -
+2026-03-16 21:42:41,270 - INFO - 127.0.0.1 - - [16/Mar/2026 21:42:41] "GET /unidades/3/produtos HTTP/1.1" 200 -
+2026-03-16 21:49:37,312 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-16 21:49:37,703 - INFO -  * Restarting with stat
+2026-03-16 21:49:45,649 - WARNING -  * Debugger is active!
+2026-03-16 21:49:45,669 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 21:49:47,056 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-16 21:49:47,279 - INFO -  * Restarting with stat
+2026-03-16 21:49:51,617 - WARNING -  * Debugger is active!
+2026-03-16 21:49:51,632 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 21:50:01,604 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-16 21:50:01,604 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-16 21:50:01,608 - INFO -  * Restarting with stat
+2026-03-16 21:50:03,378 - WARNING -  * Debugger is active!
+2026-03-16 21:50:03,394 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 21:50:08,879 - INFO - 127.0.0.1 - - [16/Mar/2026 21:50:08] "GET /docs/ HTTP/1.1" 200 -
+2026-03-16 21:50:09,407 - INFO - 127.0.0.1 - - [16/Mar/2026 21:50:09] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-16 21:50:09,414 - INFO - 127.0.0.1 - - [16/Mar/2026 21:50:09] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-16 21:50:09,442 - INFO - 127.0.0.1 - - [16/Mar/2026 21:50:09] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-16 21:50:09,444 - INFO - 127.0.0.1 - - [16/Mar/2026 21:50:09] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-16 21:50:09,887 - INFO - 127.0.0.1 - - [16/Mar/2026 21:50:09] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-16 21:50:09,895 - INFO - 127.0.0.1 - - [16/Mar/2026 21:50:09] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-16 21:50:39,115 - INFO - Login realizado: joao@email.com
+2026-03-16 21:50:39,116 - INFO - 127.0.0.1 - - [16/Mar/2026 21:50:39] "POST /login HTTP/1.1" 200 -
+2026-03-16 21:51:36,940 - INFO - 127.0.0.1 - - [16/Mar/2026 21:51:36] "[31m[1mPOST /produtos HTTP/1.1[0m" 401 -
+2026-03-16 21:52:09,536 - INFO - Login realizado: joao@email.com
+2026-03-16 21:52:09,537 - INFO - 127.0.0.1 - - [16/Mar/2026 21:52:09] "POST /login HTTP/1.1" 200 -
+2026-03-16 21:52:47,736 - INFO - 127.0.0.1 - - [16/Mar/2026 21:52:47] "[35m[1mPOST /produtos HTTP/1.1[0m" 201 -
+2026-03-16 21:57:14,674 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-16 21:57:15,050 - INFO -  * Restarting with stat
+2026-03-16 21:57:17,996 - WARNING -  * Debugger is active!
+2026-03-16 21:57:18,017 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 21:57:31,584 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-16 21:57:31,816 - INFO -  * Restarting with stat
+2026-03-16 21:57:36,591 - WARNING -  * Debugger is active!
+2026-03-16 21:57:36,611 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 22:00:14,591 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-16 22:00:16,369 - INFO -  * Restarting with stat
+2026-03-16 22:00:19,404 - WARNING -  * Debugger is active!
+2026-03-16 22:00:19,418 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 22:01:30,967 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-16 22:01:32,509 - INFO -  * Restarting with stat
+2026-03-16 22:01:36,773 - WARNING -  * Debugger is active!
+2026-03-16 22:01:36,796 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 22:02:12,233 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-16 22:02:12,234 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-16 22:02:12,236 - INFO -  * Restarting with stat
+2026-03-16 22:02:14,000 - WARNING -  * Debugger is active!
+2026-03-16 22:02:14,015 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 22:02:23,558 - INFO - 127.0.0.1 - - [16/Mar/2026 22:02:23] "GET /docs/ HTTP/1.1" 200 -
+2026-03-16 22:02:24,041 - INFO - 127.0.0.1 - - [16/Mar/2026 22:02:24] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-16 22:02:24,097 - INFO - 127.0.0.1 - - [16/Mar/2026 22:02:24] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-16 22:02:24,107 - INFO - 127.0.0.1 - - [16/Mar/2026 22:02:24] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-16 22:02:24,111 - INFO - 127.0.0.1 - - [16/Mar/2026 22:02:24] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-16 22:02:25,547 - INFO - 127.0.0.1 - - [16/Mar/2026 22:02:25] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-16 22:02:25,643 - INFO - 127.0.0.1 - - [16/Mar/2026 22:02:25] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-16 22:02:57,763 - INFO - Login realizado: marcelo@email.com
+2026-03-16 22:02:57,763 - INFO - 127.0.0.1 - - [16/Mar/2026 22:02:57] "POST /login HTTP/1.1" 200 -
+2026-03-16 22:04:11,259 - INFO - 127.0.0.1 - - [16/Mar/2026 22:04:11] "[35m[1mPOST /produtos HTTP/1.1[0m" 201 -
+2026-03-16 22:04:29,666 - INFO - 127.0.0.1 - - [16/Mar/2026 22:04:29] "GET /unidades/1/produtos HTTP/1.1" 200 -
+2026-03-16 22:05:14,037 - INFO - 127.0.0.1 - - [16/Mar/2026 22:05:14] "PUT /estoque/6 HTTP/1.1" 200 -
+2026-03-16 22:05:49,825 - INFO - 127.0.0.1 - - [16/Mar/2026 22:05:49] "GET /pedidos?canalPedido=app HTTP/1.1" 200 -
+2026-03-16 22:06:42,827 - INFO - 127.0.0.1 - - [16/Mar/2026 22:06:42] "[31m[1mPUT /pedido/1/status HTTP/1.1[0m" 400 -
+2026-03-16 22:07:00,272 - INFO - 127.0.0.1 - - [16/Mar/2026 22:07:00] "PUT /pedido/1/status HTTP/1.1" 200 -
+2026-03-16 22:07:17,831 - INFO - 127.0.0.1 - - [16/Mar/2026 22:07:17] "PUT /pedido/1/status HTTP/1.1" 200 -
+2026-03-16 22:08:01,823 - INFO - 127.0.0.1 - - [16/Mar/2026 22:08:01] "POST /ativar-fidelidade HTTP/1.1" 200 -
+2026-03-16 22:08:21,654 - INFO - 127.0.0.1 - - [16/Mar/2026 22:08:21] "GET /meus-pontos HTTP/1.1" 200 -
+2026-03-16 22:09:30,241 - INFO - 127.0.0.1 - - [16/Mar/2026 22:09:30] "[31m[1mPOST /pedidos/1/pagamento HTTP/1.1[0m" 409 -
+2026-03-16 22:09:42,099 - INFO - Pagamento do pedido 2 processado com resultado: pago
+2026-03-16 22:09:42,100 - INFO - 127.0.0.1 - - [16/Mar/2026 22:09:42] "POST /pedidos/2/pagamento HTTP/1.1" 200 -
+2026-03-16 22:09:57,791 - INFO - Pagamento do pedido 3 processado com resultado: pago
+2026-03-16 22:09:57,792 - INFO - 127.0.0.1 - - [16/Mar/2026 22:09:57] "POST /pedidos/3/pagamento HTTP/1.1" 200 -
+2026-03-16 22:10:32,095 - INFO - 127.0.0.1 - - [16/Mar/2026 22:10:32] "PUT /pedido/2/cancelar HTTP/1.1" 200 -
+2026-03-16 22:10:44,912 - INFO - 127.0.0.1 - - [16/Mar/2026 22:10:44] "GET /meus-pedidos HTTP/1.1" 200 -
+2026-03-16 22:11:34,569 - INFO - Pedido 11 criado pelo usuário 3 na unidade 1
+2026-03-16 22:11:34,570 - INFO - 127.0.0.1 - - [16/Mar/2026 22:11:34] "[35m[1mPOST /pedidos HTTP/1.1[0m" 201 -
+2026-03-16 22:20:14,822 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-16 22:20:15,181 - INFO -  * Restarting with stat
+2026-03-16 22:20:24,686 - WARNING -  * Debugger is active!
+2026-03-16 22:20:24,703 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 22:21:11,775 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-16 22:21:11,775 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-16 22:21:11,778 - INFO -  * Restarting with stat
+2026-03-16 22:21:14,651 - WARNING -  * Debugger is active!
+2026-03-16 22:21:14,667 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 22:21:36,088 - INFO - 127.0.0.1 - - [16/Mar/2026 22:21:36] "GET /docs/ HTTP/1.1" 200 -
+2026-03-16 22:21:36,629 - INFO - 127.0.0.1 - - [16/Mar/2026 22:21:36] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-16 22:21:36,636 - INFO - 127.0.0.1 - - [16/Mar/2026 22:21:36] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-16 22:21:36,641 - INFO - 127.0.0.1 - - [16/Mar/2026 22:21:36] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-16 22:21:36,673 - INFO - 127.0.0.1 - - [16/Mar/2026 22:21:36] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-16 22:21:37,072 - INFO - 127.0.0.1 - - [16/Mar/2026 22:21:37] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2026-03-16 22:21:37,120 - INFO - 127.0.0.1 - - [16/Mar/2026 22:21:37] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-16 22:21:58,570 - INFO - Login realizado: isaque@email.com
+2026-03-16 22:21:58,572 - INFO - 127.0.0.1 - - [16/Mar/2026 22:21:58] "POST /login HTTP/1.1" 200 -
+2026-03-16 22:22:43,720 - INFO - Pedido 12 criado pelo usuário 4 na unidade 1
+2026-03-16 22:22:43,720 - INFO - 127.0.0.1 - - [16/Mar/2026 22:22:43] "[35m[1mPOST /pedidos HTTP/1.1[0m" 201 -
+2026-03-16 22:23:35,990 - INFO - 127.0.0.1 - - [16/Mar/2026 22:23:35] "[31m[1mPOST /ativar-fidelidade HTTP/1.1[0m" 401 -
+2026-03-16 22:24:02,688 - INFO - 127.0.0.1 - - [16/Mar/2026 22:24:02] "GET /users HTTP/1.1" 200 -
+2026-03-16 22:24:59,172 - INFO - 127.0.0.1 - - [16/Mar/2026 22:24:59] "GET /unidades/1/produtos HTTP/1.1" 200 -
+2026-03-16 22:27:35,993 - INFO - 127.0.0.1 - - [16/Mar/2026 22:27:35] "GET /unidades/2/produtos HTTP/1.1" 200 -
+2026-03-16 22:27:44,328 - INFO - 127.0.0.1 - - [16/Mar/2026 22:27:44] "GET /unidades/3/produtos HTTP/1.1" 200 -
+2026-03-16 22:28:22,276 - INFO - 127.0.0.1 - - [16/Mar/2026 22:28:22] "[31m[1mGET /unidades/1/pedidos HTTP/1.1[0m" 401 -
+2026-03-16 22:34:45,922 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-16 22:34:45,922 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-16 22:34:45,924 - INFO -  * Restarting with stat
+2026-03-16 22:34:47,770 - WARNING -  * Debugger is active!
+2026-03-16 22:34:47,790 - INFO -  * Debugger PIN: 268-760-856
+2026-03-16 22:35:01,581 - INFO - 127.0.0.1 - - [16/Mar/2026 22:35:01] "GET /docs/ HTTP/1.1" 200 -
+2026-03-16 22:35:02,123 - INFO - 127.0.0.1 - - [16/Mar/2026 22:35:02] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-16 22:35:02,159 - INFO - 127.0.0.1 - - [16/Mar/2026 22:35:02] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-16 22:35:02,169 - INFO - 127.0.0.1 - - [16/Mar/2026 22:35:02] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-16 22:35:02,187 - INFO - 127.0.0.1 - - [16/Mar/2026 22:35:02] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-16 22:35:03,006 - INFO - 127.0.0.1 - - [16/Mar/2026 22:35:03] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-16 22:35:38,838 - INFO - 127.0.0.1 - - [16/Mar/2026 22:35:38] "GET /users HTTP/1.1" 200 -
+2026-03-16 22:36:11,127 - INFO - Login realizado: isaque@email.com
+2026-03-16 22:36:11,127 - INFO - 127.0.0.1 - - [16/Mar/2026 22:36:11] "POST /login HTTP/1.1" 200 -
+2026-03-16 22:37:11,339 - INFO - 127.0.0.1 - - [16/Mar/2026 22:37:11] "[35m[1mPOST /produtos HTTP/1.1[0m" 201 -
+2026-03-16 22:38:10,667 - INFO - 127.0.0.1 - - [16/Mar/2026 22:38:10] "PUT /estoque/2 HTTP/1.1" 200 -
+2026-03-16 22:38:51,841 - INFO - 127.0.0.1 - - [16/Mar/2026 22:38:51] "[31m[1mPOST /pedidos HTTP/1.1[0m" 400 -
+2026-03-16 22:39:14,556 - INFO - 127.0.0.1 - - [16/Mar/2026 22:39:14] "[31m[1mPOST /pedidos HTTP/1.1[0m" 400 -
+2026-03-16 22:39:25,523 - INFO - 127.0.0.1 - - [16/Mar/2026 22:39:25] "[31m[1mPOST /pedidos HTTP/1.1[0m" 409 -
+2026-03-16 22:39:34,823 - INFO - 127.0.0.1 - - [16/Mar/2026 22:39:34] "[31m[1mPOST /pedidos HTTP/1.1[0m" 400 -
+2026-03-16 22:39:57,401 - INFO - 127.0.0.1 - - [16/Mar/2026 22:39:57] "GET /unidades/3/produtos HTTP/1.1" 200 -
+2026-03-16 22:40:37,040 - INFO - 127.0.0.1 - - [16/Mar/2026 22:40:37] "[31m[1mPOST /pedidos HTTP/1.1[0m" 409 -
+2026-03-16 22:40:50,904 - INFO - 127.0.0.1 - - [16/Mar/2026 22:40:50] "[31m[1mPOST /pedidos HTTP/1.1[0m" 409 -
+2026-03-16 22:41:18,287 - INFO - 127.0.0.1 - - [16/Mar/2026 22:41:18] "PUT /estoque/7 HTTP/1.1" 200 -
+2026-03-16 22:41:43,358 - INFO - Pedido 13 criado pelo usuário 4 na unidade 3
+2026-03-16 22:41:43,358 - INFO - 127.0.0.1 - - [16/Mar/2026 22:41:43] "[35m[1mPOST /pedidos HTTP/1.1[0m" 201 -
+2026-03-17 19:52:45,009 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-17 19:52:45,009 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-17 19:52:45,020 - INFO -  * Restarting with stat
+2026-03-17 19:52:46,866 - WARNING -  * Debugger is active!
+2026-03-17 19:52:46,881 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 19:52:52,036 - INFO - 127.0.0.1 - - [17/Mar/2026 19:52:52] "GET / HTTP/1.1" 200 -
+2026-03-17 19:52:53,728 - INFO - 127.0.0.1 - - [17/Mar/2026 19:52:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-17 19:53:02,515 - INFO - 127.0.0.1 - - [17/Mar/2026 19:53:02] "[32mGET /docs HTTP/1.1[0m" 308 -
+2026-03-17 19:53:02,604 - INFO - 127.0.0.1 - - [17/Mar/2026 19:53:02] "GET /docs/ HTTP/1.1" 200 -
+2026-03-17 19:53:03,152 - INFO - 127.0.0.1 - - [17/Mar/2026 19:53:03] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-17 19:53:03,196 - INFO - 127.0.0.1 - - [17/Mar/2026 19:53:03] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-17 19:53:03,205 - INFO - 127.0.0.1 - - [17/Mar/2026 19:53:03] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-17 19:53:03,216 - INFO - 127.0.0.1 - - [17/Mar/2026 19:53:03] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-17 19:53:03,755 - INFO - 127.0.0.1 - - [17/Mar/2026 19:53:03] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-17 19:53:26,794 - INFO - 127.0.0.1 - - [17/Mar/2026 19:53:26] "GET /users HTTP/1.1" 200 -
+2026-03-17 19:54:06,552 - INFO - Login realizado: joao@email.com
+2026-03-17 19:54:06,553 - INFO - 127.0.0.1 - - [17/Mar/2026 19:54:06] "POST /login HTTP/1.1" 200 -
+2026-03-17 19:55:10,880 - INFO - 127.0.0.1 - - [17/Mar/2026 19:55:10] "GET /meus-pedidos HTTP/1.1" 200 -
+2026-03-17 20:14:38,284 - INFO - 127.0.0.1 - - [17/Mar/2026 20:14:38] "[31m[1mPOST /pedidos HTTP/1.1[0m" 401 -
+2026-03-17 20:16:44,542 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\domain\\pedido.py', reloading
+2026-03-17 20:16:45,119 - INFO -  * Restarting with stat
+2026-03-17 20:16:47,799 - WARNING -  * Debugger is active!
+2026-03-17 20:16:47,821 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:16:52,761 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\domain\\pedido.py', reloading
+2026-03-17 20:16:52,934 - INFO -  * Restarting with stat
+2026-03-17 20:16:56,287 - WARNING -  * Debugger is active!
+2026-03-17 20:16:56,312 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:17:04,285 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\domain\\pedido.py', reloading
+2026-03-17 20:17:04,708 - INFO -  * Restarting with stat
+2026-03-17 20:17:09,875 - WARNING -  * Debugger is active!
+2026-03-17 20:17:09,903 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:17:15,178 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\domain\\pedido.py', reloading
+2026-03-17 20:17:15,351 - INFO -  * Restarting with stat
+2026-03-17 20:17:18,391 - WARNING -  * Debugger is active!
+2026-03-17 20:17:18,407 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:17:23,448 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\domain\\pedido.py', reloading
+2026-03-17 20:17:24,160 - INFO -  * Restarting with stat
+2026-03-17 20:17:27,116 - WARNING -  * Debugger is active!
+2026-03-17 20:17:27,137 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:17:41,074 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\domain\\pedido.py', reloading
+2026-03-17 20:17:41,327 - INFO -  * Restarting with stat
+2026-03-17 20:17:43,280 - WARNING -  * Debugger is active!
+2026-03-17 20:17:43,294 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:18:38,329 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-17 20:18:38,593 - INFO -  * Restarting with stat
+2026-03-17 20:18:41,956 - WARNING -  * Debugger is active!
+2026-03-17 20:18:41,977 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:19:22,144 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-17 20:19:22,701 - INFO -  * Restarting with stat
+2026-03-17 20:19:26,340 - WARNING -  * Debugger is active!
+2026-03-17 20:19:26,360 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:19:39,478 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-17 20:19:39,697 - INFO -  * Restarting with stat
+2026-03-17 20:19:43,067 - WARNING -  * Debugger is active!
+2026-03-17 20:19:43,088 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:20:26,515 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-17 20:20:26,814 - INFO -  * Restarting with stat
+2026-03-17 20:20:31,509 - WARNING -  * Debugger is active!
+2026-03-17 20:20:31,531 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:20:52,399 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-17 20:20:52,601 - INFO -  * Restarting with stat
+2026-03-17 20:20:55,660 - WARNING -  * Debugger is active!
+2026-03-17 20:20:55,679 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:22:19,098 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-17 20:22:19,478 - INFO -  * Restarting with stat
+2026-03-17 20:22:23,548 - WARNING -  * Debugger is active!
+2026-03-17 20:22:23,564 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:26:07,100 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-17 20:26:07,245 - INFO -  * Restarting with stat
+2026-03-17 20:26:17,630 - WARNING -  * Debugger is active!
+2026-03-17 20:26:17,650 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:26:23,435 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-17 20:26:23,964 - INFO -  * Restarting with stat
+2026-03-17 20:26:40,787 - WARNING -  * Debugger is active!
+2026-03-17 20:26:40,807 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:26:45,335 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-17 20:26:47,148 - INFO -  * Restarting with stat
+2026-03-17 20:27:00,262 - WARNING -  * Debugger is active!
+2026-03-17 20:27:00,284 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:32:24,655 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-17 20:32:24,877 - INFO -  * Restarting with stat
+2026-03-17 20:32:27,126 - WARNING -  * Debugger is active!
+2026-03-17 20:32:27,144 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:33:08,505 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-17 20:33:08,642 - INFO -  * Restarting with stat
+2026-03-17 20:33:10,413 - WARNING -  * Debugger is active!
+2026-03-17 20:33:10,427 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:33:42,799 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-17 20:33:43,003 - INFO -  * Restarting with stat
+2026-03-17 20:33:45,223 - WARNING -  * Debugger is active!
+2026-03-17 20:33:45,238 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:34:50,443 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-17 20:34:50,817 - INFO -  * Restarting with stat
+2026-03-17 20:34:56,837 - WARNING -  * Debugger is active!
+2026-03-17 20:34:56,878 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:35:04,869 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-17 20:35:07,546 - INFO -  * Restarting with stat
+2026-03-17 20:35:10,958 - WARNING -  * Debugger is active!
+2026-03-17 20:35:10,977 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:35:39,074 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-17 20:35:39,075 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-17 20:35:39,077 - INFO -  * Restarting with stat
+2026-03-17 20:35:41,160 - WARNING -  * Debugger is active!
+2026-03-17 20:35:41,174 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:35:44,687 - INFO - 127.0.0.1 - - [17/Mar/2026 20:35:44] "GET /docs/ HTTP/1.1" 200 -
+2026-03-17 20:35:45,264 - INFO - 127.0.0.1 - - [17/Mar/2026 20:35:45] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-03-17 20:35:45,289 - INFO - 127.0.0.1 - - [17/Mar/2026 20:35:45] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-03-17 20:35:45,299 - INFO - 127.0.0.1 - - [17/Mar/2026 20:35:45] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-03-17 20:35:45,307 - INFO - 127.0.0.1 - - [17/Mar/2026 20:35:45] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-03-17 20:35:46,823 - INFO - 127.0.0.1 - - [17/Mar/2026 20:35:46] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -
+2026-03-17 20:35:46,841 - INFO - 127.0.0.1 - - [17/Mar/2026 20:35:46] "GET /apispec.json HTTP/1.1" 200 -
+2026-03-17 20:36:09,746 - INFO - Login realizado: joao@email.com
+2026-03-17 20:36:09,747 - INFO - 127.0.0.1 - - [17/Mar/2026 20:36:09] "POST /login HTTP/1.1" 200 -
+2026-03-17 20:37:30,947 - INFO - 127.0.0.1 - - [17/Mar/2026 20:37:30] "[31m[1mPOST /pedidos HTTP/1.1[0m" 400 -
+2026-03-17 20:37:50,894 - INFO - 127.0.0.1 - - [17/Mar/2026 20:37:50] "[31m[1mPOST /pedidos HTTP/1.1[0m" 409 -
+2026-03-17 20:38:01,382 - INFO - Pedido 14 criado pelo usuário 1 na unidade 1
+2026-03-17 20:38:01,383 - INFO - 127.0.0.1 - - [17/Mar/2026 20:38:01] "[35m[1mPOST /pedidos HTTP/1.1[0m" 201 -
+2026-03-17 20:39:00,071 - INFO - 127.0.0.1 - - [17/Mar/2026 20:39:00] "GET /pedidos?canalPedido=TOTEM HTTP/1.1" 200 -
+2026-03-17 20:41:20,044 - INFO -  * Detected change in 'C:\\Users\\Marcelo e Raquel\\PycharmProjects\\RaizesDoNordeste\\app\\api\\routes.py', reloading
+2026-03-17 20:41:20,311 - INFO -  * Restarting with stat
+2026-03-17 20:41:22,772 - WARNING -  * Debugger is active!
+2026-03-17 20:41:22,791 - INFO -  * Debugger PIN: 268-760-856
+2026-03-17 20:41:34,645 - INFO - 127.0.0.1 - - [17/Mar/2026 20:41:34] "GET /unidades/3/pedidos HTTP/1.1" 200 -
+2026-03-17 20:41:44,338 - INFO - 127.0.0.1 - - [17/Mar/2026 20:41:44] "GET /unidades/4/pedidos HTTP/1.1" 200 -
+2026-03-17 20:41:52,592 - INFO - 127.0.0.1 - - [17/Mar/2026 20:41:52] "GET /unidades/5/pedidos HTTP/1.1" 200 -
+2026-03-17 20:42:01,687 - INFO - 127.0.0.1 - - [17/Mar/2026 20:42:01] "GET /unidades/3/pedidos HTTP/1.1" 200 -
+2026-03-17 20:42:10,089 - INFO - 127.0.0.1 - - [17/Mar/2026 20:42:10] "GET /unidades/2/pedidos HTTP/1.1" 200 -
+2026-03-17 20:42:20,069 - INFO - 127.0.0.1 - - [17/Mar/2026 20:42:20] "GET /unidades/1/pedidos HTTP/1.1" 200 -
+2026-03-17 21:13:31,285 - INFO - 127.0.0.1 - - [17/Mar/2026 21:13:31] "[33mPUT /register/1 HTTP/1.1[0m" 404 -
+2026-03-17 21:13:44,900 - INFO - 127.0.0.1 - - [17/Mar/2026 21:13:44] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+2026-04-10 20:31:31,988 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-10 20:31:31,989 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-10 20:31:32,002 - INFO -  * Restarting with stat
+2026-04-10 20:31:33,902 - WARNING -  * Debugger is active!
+2026-04-10 20:31:33,918 - INFO -  * Debugger PIN: 268-760-856
+2026-04-10 20:39:02,186 - INFO - 127.0.0.1 - - [10/Apr/2026 20:39:02] "[32mGET /docs HTTP/1.1[0m" 308 -
+2026-04-10 20:39:02,252 - INFO - 127.0.0.1 - - [10/Apr/2026 20:39:02] "GET /docs/ HTTP/1.1" 200 -
+2026-04-10 20:39:02,656 - INFO - 127.0.0.1 - - [10/Apr/2026 20:39:02] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 200 -
+2026-04-10 20:39:02,665 - INFO - 127.0.0.1 - - [10/Apr/2026 20:39:02] "GET /flasgger_static/lib/jquery.min.js HTTP/1.1" 200 -
+2026-04-10 20:39:02,915 - INFO - 127.0.0.1 - - [10/Apr/2026 20:39:02] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2026-04-10 20:39:02,926 - INFO - 127.0.0.1 - - [10/Apr/2026 20:39:02] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+2026-04-10 20:39:03,823 - INFO - 127.0.0.1 - - [10/Apr/2026 20:39:03] "GET /apispec.json HTTP/1.1" 200 -
+2026-04-10 20:39:03,825 - INFO - 127.0.0.1 - - [10/Apr/2026 20:39:03] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -
+2026-04-10 20:39:13,494 - INFO - 127.0.0.1 - - [10/Apr/2026 20:39:13] "GET / HTTP/1.1" 200 -
+2026-04-10 20:39:13,803 - INFO - 127.0.0.1 - - [10/Apr/2026 20:39:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-10 20:39:21,902 - INFO - 127.0.0.1 - - [10/Apr/2026 20:39:21] "GET /docs/ HTTP/1.1" 200 -
+2026-04-10 20:39:21,960 - INFO - 127.0.0.1 - - [10/Apr/2026 20:39:21] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-04-10 20:39:22,164 - INFO - 127.0.0.1 - - [10/Apr/2026 20:39:22] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-04-10 20:39:22,277 - INFO - 127.0.0.1 - - [10/Apr/2026 20:39:22] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-04-10 20:39:22,278 - INFO - 127.0.0.1 - - [10/Apr/2026 20:39:22] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-04-10 20:39:22,934 - INFO - 127.0.0.1 - - [10/Apr/2026 20:39:22] "GET /apispec.json HTTP/1.1" 200 -
+2026-04-10 20:41:51,121 - INFO - Login realizado: joao@email.com
+2026-04-10 20:41:51,122 - INFO - 127.0.0.1 - - [10/Apr/2026 20:41:51] "POST /login HTTP/1.1" 200 -
+2026-04-10 20:43:36,534 - INFO - 127.0.0.1 - - [10/Apr/2026 20:43:36] "GET /meus-pedidos HTTP/1.1" 200 -
+2026-04-10 21:16:32,234 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-10 21:16:32,234 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-10 21:16:32,237 - INFO -  * Restarting with stat
+2026-04-10 21:16:34,064 - WARNING -  * Debugger is active!
+2026-04-10 21:16:34,081 - INFO -  * Debugger PIN: 268-760-856
+2026-04-10 21:16:56,876 - INFO - 127.0.0.1 - - [10/Apr/2026 21:16:56] "GET / HTTP/1.1" 200 -
+2026-04-10 21:17:29,538 - INFO - 127.0.0.1 - - [10/Apr/2026 21:17:29] "GET /docs/ HTTP/1.1" 200 -
+2026-04-10 21:17:29,828 - INFO - 127.0.0.1 - - [10/Apr/2026 21:17:29] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-04-10 21:17:29,936 - INFO - 127.0.0.1 - - [10/Apr/2026 21:17:29] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-04-10 21:17:29,952 - INFO - 127.0.0.1 - - [10/Apr/2026 21:17:29] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-04-10 21:17:29,972 - INFO - 127.0.0.1 - - [10/Apr/2026 21:17:29] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-04-10 21:17:30,784 - INFO - 127.0.0.1 - - [10/Apr/2026 21:17:30] "GET /apispec.json HTTP/1.1" 200 -
+2026-04-10 21:17:46,703 - INFO - 127.0.0.1 - - [10/Apr/2026 21:17:46] "GET /users HTTP/1.1" 200 -
+2026-04-10 21:34:24,940 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-10 21:34:24,941 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-10 21:34:24,943 - INFO -  * Restarting with stat
+2026-04-10 21:34:26,683 - WARNING -  * Debugger is active!
+2026-04-10 21:34:26,698 - INFO -  * Debugger PIN: 268-760-856
+2026-04-10 21:34:36,003 - INFO - 127.0.0.1 - - [10/Apr/2026 21:34:36] "GET / HTTP/1.1" 200 -
+2026-04-10 21:34:42,834 - INFO - 127.0.0.1 - - [10/Apr/2026 21:34:42] "GET /docs/ HTTP/1.1" 200 -
+2026-04-10 21:34:43,400 - INFO - 127.0.0.1 - - [10/Apr/2026 21:34:43] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-04-10 21:34:43,573 - INFO - 127.0.0.1 - - [10/Apr/2026 21:34:43] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-04-10 21:34:43,582 - INFO - 127.0.0.1 - - [10/Apr/2026 21:34:43] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-04-10 21:34:43,584 - INFO - 127.0.0.1 - - [10/Apr/2026 21:34:43] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-04-10 21:34:44,218 - INFO - 127.0.0.1 - - [10/Apr/2026 21:34:44] "GET /apispec.json HTTP/1.1" 200 -
