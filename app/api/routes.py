@@ -272,21 +272,6 @@ def register_routes(app):
 
         return resultado
 
-    # @app.route('/perfil', methods=['GET'])
-    # @jwt_required()
-    # def perfil():
-    #     user_id = get_jwt_identity()
-    #
-    #     user = User.query.get(int(user_id))
-    #
-    #     if not user:
-    #         return {"erro": "Usuário não encontrado"}, 404
-    #
-    #     return {
-    #         "id": user.id,
-    #         "nome": user.nome,
-    #         "email": user.email
-    #     }, 200
 
     @app.route('/produtos', methods=['POST'])
     @jwt_required()
