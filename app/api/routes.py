@@ -12,6 +12,15 @@ from app.domain.product import Product
 from datetime import datetime
 from logs import logger
 
+def verificar_admin():
+    user_id = int(get_jwt_identity())
+    user = User.query.get(user_id)
+
+    if not user or user.role != "ADMIN":
+        return {"erro": "Acesso negado"}, 403
+
+    return None
+
 
 # Registra todas as rotas da API no objeto Flask.
 # Esse padrão centraliza os endpoints em um único módulo.
@@ -64,7 +73,12 @@ def register_routes(app):
         description: Dados incompletos
       401:
         description: Token JWT ausente ou inválido
+      403:
+        description: Acesso negado (apenas ADMIN)
     """
+        erro = verificar_admin()
+        if erro:
+            return erro
 
         data = request.get_json()
 
@@ -99,6 +113,7 @@ def register_routes(app):
                     - nome
                     - email
                     - password
+                    - role
                   properties:
                     nome:
                       type: string
@@ -108,11 +123,11 @@ def register_routes(app):
                       example: joao@email.com
                     password:
                       type: string
-                      example: 123456
+                      example: "123456"
                     role:
                       type: string
                       example: CLIENTE
-                      description: Papel do usuário no sistema (opcional)
+                      description: Papel do usuário no sistema (ADMIN ou CLIENTE)
             responses:
               201:
                 description: Usuário criado com sucesso
@@ -121,6 +136,8 @@ def register_routes(app):
               409:
                 description: E-mail já cadastrado
             """
+
+
         data = request.get_json()
 
         if not data:
@@ -129,10 +146,16 @@ def register_routes(app):
         nome = data.get("nome")
         email = data.get("email")
         password = data.get("password")
-        role = data.get("role", "CLIENTE")
 
-        if not nome or not email or not password:
+        role = data.get("role")
+
+        if not nome or not email or not password or not role:
             return {"erro": "Dados incompletos"}, 400
+
+        role = role.upper()
+
+        if role not in ["ADMIN", "CLIENTE"]:
+            return {"erro": "Role inválida"}, 400
 
 
         if User.query.filter_by(email=email).first():
@@ -233,12 +256,15 @@ def register_routes(app):
         }, 200
 
     @app.route('/users', methods=['GET'])
+    @jwt_required()
     def listar_users():
         """
             Lista todos os usuários
             ---
             tags:
               - Usuários
+            security:
+              - BearerAuth: []
             description: Retorna a lista de usuários cadastrados no sistema.
             responses:
               200:
@@ -257,20 +283,26 @@ def register_routes(app):
                       email:
                         type: string
                         example: joao@email.com
+              401:
+                description: Token JWT ausente ou inválido
+              403:
+                description: Acesso negado (apenas ADMIN)
             """
+
+        erro = verificar_admin()
+        if erro:
+            return erro
 
         users = User.query.all()
 
-        resultado = []
-
-        for user in users:
-            resultado.append({
+        return [
+            {
                 "id": user.id,
                 "nome": user.nome,
                 "email": user.email
-            })
-
-        return resultado
+            }
+            for user in users
+        ]
 
 
     @app.route('/produtos', methods=['POST'])
@@ -318,9 +350,14 @@ def register_routes(app):
         description: Dados incompletos ou JSON não enviado
       401:
         description: Token JWT ausente ou inválido
+      403:
+        description: Acesso negado (apenas ADMIN)
       404:
         description: Unidade não encontrada
     """
+        erro = verificar_admin()
+        if erro:
+            return erro
 
         data = request.get_json()
 
@@ -868,7 +905,13 @@ def register_routes(app):
                         example: 45.90
               401:
                 description: Token JWT ausente ou inválido
+              403:
+                description: Acesso negado (apenas ADMIN)
             """
+
+        erro = verificar_admin()
+        if erro:
+            return erro
 
         pedidos = Pedido.query.filter_by(unidade_id=unidade_id).all()
 
@@ -930,9 +973,15 @@ def register_routes(app):
                 description: Quantidade não informada
               401:
                 description: Token JWT ausente ou inválido
+              403:
+                description: Acesso negado (apenas ADMIN)
               404:
                 description: Produto não encontrado
             """
+
+        erro = verificar_admin()
+        if erro:
+            return erro
 
         data = request.get_json()
         quantidade = data.get("quantidade")
