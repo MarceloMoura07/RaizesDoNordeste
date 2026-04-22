@@ -1,0 +1,1040 @@
+{
+  "info": {
+    "_postman_id": "57087a4d-88f7-4327-a32b-f0f1b71155a3",
+    "name": "Raízes do Nordeste",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47515298",
+    "_collection_link": "https://go.postman.co/collection/47515298-57087a4d-88f7-4327-a32b-f0f1b71155a3?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register CLIENTE",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Marcelo Moura\",\r\n  \"email\": \"marcelo@email.com.br\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"CLIENTE\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/register",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login CLIENTE",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"token_cliente\", pm.response.json().access_token);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"marcelo@email.com.br\",\r\n  \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Register ADMIN",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Admin\",\r\n  \"email\": \"admin@email.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"ADMIN\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/register",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login ADMIN",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"token_admin\", pm.response.json().access_token);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"admin@email.com\",\r\n  \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Criar Unidade",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3Njc0MDcxNywianRpIjoiYWM4ODZmZGQtNTMyZS00ZGY1LWIwMjYtNThiMDRiYjdmNDIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjIiLCJuYmYiOjE3NzY3NDA3MTcsImNzcmYiOiI3YTAwZWRjNC02NWQ1LTQ4MGMtOTMyOS1mYzAwMjI4MzRmNDUiLCJleHAiOjE3NzY3NDE2MTd9.8_GX9jkz9nm5euvReH9LcDthNnFjHSVzo2EAAkgomA0",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Unidade Recife\",\r\n  \"cidade\": \"Recife\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/unidades",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "unidades"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Criar Produto",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3Njc0MDcxNywianRpIjoiYWM4ODZmZGQtNTMyZS00ZGY1LWIwMjYtNThiMDRiYjdmNDIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjIiLCJuYmYiOjE3NzY3NDA3MTcsImNzcmYiOiI3YTAwZWRjNC02NWQ1LTQ4MGMtOTMyOS1mYzAwMjI4MzRmNDUiLCJleHAiOjE3NzY3NDE2MTd9.8_GX9jkz9nm5euvReH9LcDthNnFjHSVzo2EAAkgomA0",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Baião de Dois\",\r\n  \"preco\": 25.00,\r\n  \"unidade_id\": {{unidade_id}}\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/produtos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "produtos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Atualizar Estoque Produto 1",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjgxMjc0MiwianRpIjoiNDdjNzllOTgtM2FjOC00ZDVkLThlNmMtNmM4NGRmMjMxODBmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjIiLCJuYmYiOjE3NzY4MTI3NDIsImNzcmYiOiIzYmYwMTNmMS1kMDQyLTRhNTctOTM5ZS1jNzU4NDMxNzZiNmQiLCJleHAiOjE3NzY4MTM2NDJ9.Nhdyg2QOzjLJTd3hnDysJD5XJ4HCeAjtWOnJ5tcmITQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"quantidade\": 50\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/estoque/{{produto_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "estoque",
+                "{{produto_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Atualizar Estoque Produto 2",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjgxMjc0MiwianRpIjoiNDdjNzllOTgtM2FjOC00ZDVkLThlNmMtNmM4NGRmMjMxODBmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjIiLCJuYmYiOjE3NzY4MTI3NDIsImNzcmYiOiIzYmYwMTNmMS1kMDQyLTRhNTctOTM5ZS1jNzU4NDMxNzZiNmQiLCJleHAiOjE3NzY4MTM2NDJ9.Nhdyg2QOzjLJTd3hnDysJD5XJ4HCeAjtWOnJ5tcmITQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"quantidade\": 30\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/estoque/{{produto_id_2}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "estoque",
+                "{{produto_id_2}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Pedidos",
+      "item": [
+        {
+          "name": "Criar Pedido",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const json = pm.response.json();\r",
+                  "pm.environment.set(\"pedido_id\", json.pedido_id);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjgxNDE3MSwianRpIjoiODg0NTRiOGQtODZkMC00OTUyLTkxNDAtM2IyY2RkZjJiMDgzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NzY4MTQxNzEsImNzcmYiOiJmMzhiODdmNy01MTM0LTQwODktOGNkYS1jMGQ3NmVhOTQwOTQiLCJleHAiOjE3NzY4MTUwNzF9.sjPBQFbvV3hV8TpppxqUB3g9lSuQqacDF2i52mN3TWc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"canal\": \"APP\",\r\n  \"itens\": [\r\n    {\r\n      \"produto_id\": {{produto_id}},\r\n      \"quantidade\": 5\r\n    },\r\n    {\r\n      \"produto_id\": {{produto_id_2}},\r\n      \"quantidade\": 1\r\n    }\r\n  ],\r\n  \"unidade_id\": {{unidade_id}}\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/pedidos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pedidos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pagamento Aprovado",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status 200\", function () {\r",
+                  "    pm.response.to.have.status(200);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjgxNDE3MSwianRpIjoiODg0NTRiOGQtODZkMC00OTUyLTkxNDAtM2IyY2RkZjJiMDgzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NzY4MTQxNzEsImNzcmYiOiJmMzhiODdmNy01MTM0LTQwODktOGNkYS1jMGQ3NmVhOTQwOTQiLCJleHAiOjE3NzY4MTUwNzF9.sjPBQFbvV3hV8TpppxqUB3g9lSuQqacDF2i52mN3TWc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"resultado\": \"aprovado\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/pedidos/{{pedido_id}}/pagamento",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pedidos",
+                "{{pedido_id}}",
+                "pagamento"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pagamento Recusado",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjgxNTM2NywianRpIjoiODk0YmU0YjItYmVlNS00NjRmLTg0MGUtMDMwMDdmZTc5NjBmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NzY4MTUzNjcsImNzcmYiOiJjOGNmZGY5Yy0zMmM4LTQ1OWMtYTQwYy1iNGU3ZTcyMTc5ZjYiLCJleHAiOjE3NzY4MTYyNjd9.zCxdAF2iKQuCTZYwhP8HtWJZaH-IMQERWgp1jk6txq8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"resultado\": \"recusado\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/pedidos/{{pedido_id}}/pagamento",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pedidos",
+                "{{pedido_id}}",
+                "pagamento"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Status Cozinha",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjgxNjIwMiwianRpIjoiMDlkNzE5ZGYtMDEzMC00Njc0LWI5ZDAtZjY1YjlmNzg2MTA4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjIiLCJuYmYiOjE3NzY4MTYyMDIsImNzcmYiOiJiZWE4NTkxZC01MmMxLTRiNzktOTA0ZC03M2YzMjRkMTgxMmMiLCJleHAiOjE3NzY4MTcxMDJ9.W789-tHTyAxvqwxAgySXFokz_toTQAGFXXN1e2Ii-gE",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"status\": \"cozinha\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/pedido/{{pedido_id}}/status",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pedido",
+                "{{pedido_id}}",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Status Pronto",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjgxNjIwMiwianRpIjoiMDlkNzE5ZGYtMDEzMC00Njc0LWI5ZDAtZjY1YjlmNzg2MTA4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjIiLCJuYmYiOjE3NzY4MTYyMDIsImNzcmYiOiJiZWE4NTkxZC01MmMxLTRiNzktOTA0ZC03M2YzMjRkMTgxMmMiLCJleHAiOjE3NzY4MTcxMDJ9.W789-tHTyAxvqwxAgySXFokz_toTQAGFXXN1e2Ii-gE",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"status\": \"pronto\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/pedido/{{pedido_id}}/status",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pedido",
+                "{{pedido_id}}",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Status Entregue",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjgxNjIwMiwianRpIjoiMDlkNzE5ZGYtMDEzMC00Njc0LWI5ZDAtZjY1YjlmNzg2MTA4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjIiLCJuYmYiOjE3NzY4MTYyMDIsImNzcmYiOiJiZWE4NTkxZC01MmMxLTRiNzktOTA0ZC03M2YzMjRkMTgxMmMiLCJleHAiOjE3NzY4MTcxMDJ9.W789-tHTyAxvqwxAgySXFokz_toTQAGFXXN1e2Ii-gE",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"status\": \"entregue\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/pedido/{{pedido_id}}/status",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pedido",
+                "{{pedido_id}}",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Negativos",
+      "item": [
+        {
+          "name": "Sem Token",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"401 sem token\", () => pm.response.to.have.status(401));"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/pedidos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pedidos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Sem Permissão",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjgxNjk4MCwianRpIjoiZjJjMmY1NzMtNzI3Ny00OGQ1LWFhODktYzAxMTFmMDQ0MjZkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NzY4MTY5ODAsImNzcmYiOiJkMmYyYTQxNS05YzBiLTRkNDMtYWRiYS1jM2RmMzdlY2NiNGMiLCJleHAiOjE3NzY4MTc4ODB9.XpwDWp4DT5KGDa96_56hAHKpYNSp8B-kj6hefZg9Bvc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Teste\",\r\n  \"cidade\": \"Recife\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/unidades",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "unidades"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Estoque Insuficiente",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjgxNjk4MCwianRpIjoiZjJjMmY1NzMtNzI3Ny00OGQ1LWFhODktYzAxMTFmMDQ0MjZkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NzY4MTY5ODAsImNzcmYiOiJkMmYyYTQxNS05YzBiLTRkNDMtYWRiYS1jM2RmMzdlY2NiNGMiLCJleHAiOjE3NzY4MTc4ODB9.XpwDWp4DT5KGDa96_56hAHKpYNSp8B-kj6hefZg9Bvc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"canal\": \"BALCAO\",\r\n  \"itens\": [\r\n    {\r\n      \"produto_id\": {{produto_id}},\r\n      \"quantidade\": 99\r\n    }\r\n  ],\r\n  \"unidade_id\": {{unidade_id}}\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/pedidos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pedidos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Produto Inexistente",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjgxNjk4MCwianRpIjoiZjJjMmY1NzMtNzI3Ny00OGQ1LWFhODktYzAxMTFmMDQ0MjZkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NzY4MTY5ODAsImNzcmYiOiJkMmYyYTQxNS05YzBiLTRkNDMtYWRiYS1jM2RmMzdlY2NiNGMiLCJleHAiOjE3NzY4MTc4ODB9.XpwDWp4DT5KGDa96_56hAHKpYNSp8B-kj6hefZg9Bvc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"canal\": \"WEB\",\r\n  \"itens\": [\r\n    {\r\n      \"produto_id\": 99,\r\n      \"quantidade\": 1\r\n    }\r\n  ],\r\n  \"unidade_id\": {{unidade_id}}\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/pedidos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pedidos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Campo Obrigatório Ausente",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjgxNjk4MCwianRpIjoiZjJjMmY1NzMtNzI3Ny00OGQ1LWFhODktYzAxMTFmMDQ0MjZkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NzY4MTY5ODAsImNzcmYiOiJkMmYyYTQxNS05YzBiLTRkNDMtYWRiYS1jM2RmMzdlY2NiNGMiLCJleHAiOjE3NzY4MTc4ODB9.XpwDWp4DT5KGDa96_56hAHKpYNSp8B-kj6hefZg9Bvc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"canal\": \"APP\",\r\n  \"unidade_id\": {{unidade_id}}\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/pedidos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pedidos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Status Invalido",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjgxNzcwNywianRpIjoiNDc2MzkxNWMtZWFlMy00YWQwLTg3NDctZDNhNjNiMzYzNGNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjIiLCJuYmYiOjE3NzY4MTc3MDcsImNzcmYiOiIwZDhiZTJmMy03ZWNkLTRmZGMtOGFhNC1iOTVlMDJjYjA2YmEiLCJleHAiOjE3NzY4MTg2MDd9.7kup7mJTzCO23gdEoeAxz1lBlZeXwZLwSO9vTMnZMMw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"status\": \"finalizado\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/pedido/{{pedido_id}}/status",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pedido",
+                "{{pedido_id}}",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pedido Inexistente",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjgxNzcwNywianRpIjoiNDc2MzkxNWMtZWFlMy00YWQwLTg3NDctZDNhNjNiMzYzNGNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjIiLCJuYmYiOjE3NzY4MTc3MDcsImNzcmYiOiIwZDhiZTJmMy03ZWNkLTRmZGMtOGFhNC1iOTVlMDJjYjA2YmEiLCJleHAiOjE3NzY4MTg2MDd9.7kup7mJTzCO23gdEoeAxz1lBlZeXwZLwSO9vTMnZMMw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"status\": \"cozinha\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/pedido/99/status",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pedido",
+                "99",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Transição Invalida",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjgxODcwMSwianRpIjoiNmQ2MWVmZjItMDljZS00NzI1LWE2MjMtNTM3MzkwNmFmNzZmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjIiLCJuYmYiOjE3NzY4MTg3MDEsImNzcmYiOiIwY2RkYTA1OS03M2VhLTQwOTQtYWE5NS1kMGZhNDhkYzlmNDAiLCJleHAiOjE3NzY4MTk2MDF9.rts5y4qvEUBYGRic5GA8EmyVEmgC5pBskwIu6TUJdAw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"status\": \"entregue\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/pedido/{{pedido_id}}/status",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pedido",
+                "{{pedido_id}}",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pagamento Duplicado",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Erro esperado\", function () {\r",
+                  "    pm.expect([400,401,403,404,409]).to.include(pm.response.code);\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc3NjgxODQyOSwianRpIjoiMTUwMzhiOTItMmIzZS00OGJjLWE1MDItOTQ2ODVlODZkZDVmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NzY4MTg0MjksImNzcmYiOiJlNmYwMWI5ZS1hNzllLTRkZjYtYTUyZi1lYjQ3NDJhYjlhOTciLCJleHAiOjE3NzY4MTkzMjl9.mjHL8FvP8e-x1-A5OFiOrN55XZCpZ_kC2WGtA6pq8Ik",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"resultado\": \"aprovado\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/pedidos/{{pedido_id}}/pagamento",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pedidos",
+                "{{pedido_id}}",
+                "pagamento"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Auditoria",
+      "item": [
+        {
+          "name": "Log no Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"marcelo@email.com.br\",\r\n  \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
