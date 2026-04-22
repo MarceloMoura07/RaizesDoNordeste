@@ -385,7 +385,10 @@ def register_routes(app):
         db.session.add(novo_produto)
         db.session.commit()
 
-        return {"message": "Produto criado com sucesso"}, 201
+        return {
+            "message": "Produto criado com sucesso",
+            "produto_id": novo_produto.id
+        }, 201
 
     @app.route('/unidades/<int:unidade_id>/produtos', methods=['GET'])
     def listar_produtos(unidade_id):

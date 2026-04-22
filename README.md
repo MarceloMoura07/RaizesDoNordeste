@@ -1,6 +1,6 @@
 # API Raízes do Nordeste
 
-##  Descrição
+## Descrição
 
 API REST desenvolvida em Flask para gerenciamento de unidades, produtos, pedidos e usuários, incluindo autenticação via JWT e regras de negócio como desconto e programa de fidelidade.
 
@@ -8,7 +8,7 @@ O projeto simula um sistema de pedidos com múltiplas entidades e operações t�
 
 ---
 
-##  Tecnologias utilizadas
+## Tecnologias utilizadas
 
 * Python
 * Flask
@@ -19,7 +19,7 @@ O projeto simula um sistema de pedidos com múltiplas entidades e operações t�
 
 ---
 
-##  Como executar o projeto
+## Como executar o projeto
 
 ### 1. Clonar o repositório
 
@@ -71,7 +71,7 @@ Como acessar:
 Após iniciar a aplicação, acesse no navegador:
 
 http://localhost:5000/docs
-O que está disponível:
+### O que está disponível:
 - Lista completa dos endpoints
 - Parâmetros de entrada (request)
 - Exemplos de requisição
@@ -107,14 +107,23 @@ Authorization: Bearer <seu_token>
 
 ---
 
-##  Estrutura do projeto
+## Estrutura do projeto
 
 ```
 app/
 │
-├── api/                # Rotas (controllers)
-├── domain/             # Modelos e regras de negócio
-├── infrastructure/     # Configuração e banco de dados
+├── api/
+├── domain/
+├── infrastructure/
+
+postman/
+│
+├── raizes-do-nordeste.postman_collection.json
+├── raizes-env.postman_environment.json
+
+run.py
+requirements.txt
+README.md
 ```
 
 ---
@@ -148,7 +157,25 @@ As responsabilidades dessa camada foram incorporadas diretamente nas rotas (API)
 
 ---
 
-##  Regras de negócio implementadas
+## Atualizações e melhorias
+
+Durante o desenvolvimento e ajustes da API, foi realizada uma melhoria no retorno das operações de criação.
+
+### Retorno de IDs nas criações
+
+Os endpoints de criação (como produtos e pedidos) foram ajustados para retornar explicitamente o identificador do recurso criado.
+
+Exemplo:
+
+```json
+{
+  "message": "Produto criado com sucesso",
+  "produto_id": 1
+}
+```
+---
+
+## Regras de negócio implementadas
 
 * Desconto de 10% para pedidos feitos via **app**
 * Controle de estoque por produto
@@ -161,14 +188,20 @@ As responsabilidades dessa camada foram incorporadas diretamente nas rotas (API)
 
 ---
 
-##  Testes
+## Testes
 
-Os testes serão realizados manualmente via ferramentas como:
+Os testes da API foram realizados manualmente utilizando:
 
-* Swagger (Flasgger)
-* Postman
+* Swagger (Flasgger) — para validação de endpoints com entradas válidas
+* Postman — para cenários de validação negativa e maior controle das requisições
 
-(Detalhamento será incluído na versão final do projeto)
+### Observação importante
+
+Alguns cenários de teste que envolvem validação de erros (como ausência de campos obrigatórios — HTTP 400) não puderam ser executados via Swagger, pois a ferramenta aplica validação prévia do schema e impede o envio de requisições incompletas.
+
+Por esse motivo, o teste **T19 — Dados incompletos** foi executado utilizando o Postman, permitindo o envio de requisições inválidas e a correta validação das regras de negócio da API.
+
+A coleção e o environment do Postman utilizados nos testes estão disponíveis na pasta /postman do repositório.
 
 ---
 
